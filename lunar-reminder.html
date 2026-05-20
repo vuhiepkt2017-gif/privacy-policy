@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách Quyền riêng tư - Lịch Âm & Nhắc Lịch</title>
+    <!-- Google Fonts: Be Vietnam Pro for premium Vietnamese typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d4af37; /* Metallic gold */
+            --primary-dark: #aa841c;
+            --primary-light: #fff9e6;
+            --bg-gradient-start: #0a0e17; /* Deep midnight blue */
+            --bg-gradient-end: #121824;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --card-bg: rgba(22, 30, 49, 0.95);
+            --border-color: rgba(212, 175, 55, 0.15);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ffe28a 0%, var(--primary) 100%);
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
+            100% { transform: scale(1.05); box-shadow: 0 0 30px rgba(212, 175, 55, 0.6); }
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            color: #0a0e17;
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(20px);
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 20px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #d1d5db;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: #d1d5db;
+        }
+
+        li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0 20px 0;
+        }
+
+        .badge {
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .important-box {
+            background: rgba(239, 68, 68, 0.08);
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            border-radius: 0 16px 16px 0;
+            margin: 25px 0;
+        }
+
+        .important-box h3 {
+            color: #f87171;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .important-box p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: #fca5a5;
+        }
+
+        .info-box {
+            background: rgba(212, 175, 55, 0.04);
+            border: 1px dashed rgba(212, 175, 55, 0.3);
+            padding: 20px;
+            border-radius: 16px;
+            margin: 25px 0;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 1px dashed var(--primary);
+        }
+
+        a:hover {
+            color: #ffe28a;
+            border-bottom-style: solid;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .content-card {
+                padding: 20px;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <span class="logo-icon">🌙</span>
+            </div>
+            <h1>Chính sách Quyền riêng tư</h1>
+            <p class="subtitle">Ứng dụng Lịch Âm & Nhắc Lịch (Lunar Reminder)</p>
+        </header>
+
+        <main class="content-card">
+            <div class="intro">
+                <p>Chào mừng bạn đến với ứng dụng <strong>Lịch Âm & Nhắc Lịch (Lunar Reminder)</strong>. Chúng tôi vô cùng trân trọng quyền riêng tư của bạn và cam kết bảo vệ dữ liệu cá nhân của người dùng một cách an toàn nhất. Chính sách này mô tả cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn khi bạn sử dụng ứng dụng của chúng tôi.</p>
+            </div>
+
+            <section>
+                <h2>1. Dữ liệu chúng tôi thu thập</h2>
+                <p>Để cung cấp dịch vụ tốt nhất, ứng dụng có thể thu thập các loại thông tin sau:</p>
+                <ul>
+                    <li><span class="highlight">Thông tin tài khoản:</span> Địa chỉ email đăng nhập của bạn (khi bạn đăng nhập thông qua Firebase Authentication hoặc các phương thức liên kết) dùng để định danh tài khoản duy nhất và đồng bộ dữ liệu.</li>
+                    <li><span class="highlight">Nội dung người dùng tạo:</span> Các ghi chú, sự kiện, sự kiện âm lịch và lịch nhắc hẹn do chính bạn tạo trong ứng dụng.</li>
+                    <li><span class="highlight">Thông tin thiết bị và định danh:</span> Để phục vụ việc hiển thị quảng cáo và phân tích lỗi, ứng dụng sử dụng quyền truy cập <span class="highlight">Google Advertising ID (AD_ID)</span> và các thông tin cơ bản về thiết bị (như kiểu máy, hệ điều hành).</li>
+                </ul>
+                <div class="badge-list">
+                    <span class="badge">Địa chỉ Email</span>
+                    <span class="badge">Ghi chú & Lịch nhắc</span>
+                    <span class="badge">Mã Quảng cáo Google (AD_ID)</span>
+                    <span class="badge">Thông tin thiết bị</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Cách chúng tôi sử dụng thông tin</h2>
+                <p>Thông tin thu thập được sử dụng duy nhất cho các mục đích hợp pháp sau:</p>
+                <ul>
+                    <li><strong>Đồng bộ dữ liệu:</strong> Lưu trữ và đồng bộ hóa các ghi chú, sự kiện âm lịch giữa các thiết bị khác nhau của cùng một tài khoản.</li>
+                    <li><strong>Gửi thông báo nhắc nhở:</strong> Lên lịch và gửi thông báo nhắc nhở các ngày lễ quan trọng, ngày rằm, mùng một và các sự kiện cá nhân theo đúng yêu cầu của bạn.</li>
+                    <li><strong>Cải thiện ứng dụng & Quảng cáo:</strong> Sử dụng mã nhận dạng quảng cáo (AD_ID) để hiển thị các quảng cáo phù hợp thông qua đối tác liên kết của Google và phân tích hiệu năng để khắc phục các lỗi phát sinh (Crashlytics).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Chia sẻ dữ liệu với bên thứ ba</h2>
+                <p>Chúng tôi cam kết không bán, trao đổi hoặc chuyển giao dữ liệu cá nhân của bạn cho bất kỳ bên thứ ba nào. Tuy nhiên, ứng dụng có tích hợp các dịch vụ chính thức từ đối tác tin cậy (Google) để hoạt động hiệu quả:</p>
+                <ul>
+                    <li><strong>Google Play Services:</strong> Dịch vụ cốt lõi để chạy ứng dụng trên hệ điều hành Android.</li>
+                    <li><strong>Firebase (Authentication & Database):</strong> Cung cấp tính năng đăng nhập bảo mật và lưu trữ cơ sở dữ liệu đám mây của Google.</li>
+                    <li><strong>Firebase Analytics & Crashlytics:</strong> Thu thập thông tin ẩn danh để phân tích hiệu suất và báo cáo sự cố ứng dụng.</li>
+                    <li><strong>Google AdMob:</strong> Mạng lưới hiển thị quảng cáo. AdMob có thể sử dụng mã AD_ID của thiết bị để phục vụ quảng cáo cá nhân hóa.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Bảo mật dữ liệu</h2>
+                <p>Dữ liệu của bạn được lưu trữ trên hạ tầng điện toán đám mây cực kỳ bảo mật của Google (Firebase) với các giao thức mã hóa dữ liệu hàng đầu (HTTPS/SSL). Chúng tôi áp dụng mọi biện pháp kỹ thuật và tổ chức cần thiết để đảm bảo thông tin của bạn không bị truy cập trái phép, sửa đổi hoặc phá hủy.</p>
+            </section>
+
+            <section class="important-box">
+                <h3>⚠️ Quyền của bạn & Xóa dữ liệu tài khoản</h3>
+                <p>Bạn có toàn quyền kiểm soát dữ liệu của mình. Bạn có thể xem, chỉnh sửa hoặc xóa bất kỳ ghi chú và lịch nhắc nào trực tiếp ngay trong ứng dụng bất cứ lúc nào.</p>
+                <p style="margin-top: 10px;"><strong>Cách xóa hoàn toàn tài khoản và dữ liệu cá nhân:</strong></p>
+                <p>Nếu bạn muốn xóa tài khoản và xóa vĩnh viễn toàn bộ dữ liệu ghi chú liên quan khỏi hệ thống của chúng tôi, bạn có thể thực hiện theo một trong hai cách:</p>
+                <ul style="margin-top: 8px; margin-bottom: 0;">
+                    <li style="color: #fca5a5;">Mở ứng dụng Lịch Âm & Nhắc Lịch -> Vào phần <strong>Cài đặt (Settings)</strong> -> Chọn <strong>Xóa tài khoản (Delete Account)</strong> và xác nhận.</li>
+                    <li style="color: #fca5a5;">Hoặc gửi email yêu cầu xóa tài khoản đến hòm thư hỗ trợ của chúng tôi tại: <a href="mailto:vuhiepkt2017@gmail.com" style="color: #ffffff; text-decoration: underline; font-weight: 600;">vuhiepkt2017@gmail.com</a>. Yêu cầu của bạn sẽ được xử lý trong vòng 24-48 giờ làm việc.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Tuân thủ và cập nhật</h2>
+                <p>Chúng tôi liên tục cập nhật Chính sách quyền riêng tư này để tuân thủ các quy định pháp luật mới nhất và các thay đổi chính sách từ cửa hàng ứng dụng Google Play. Mọi thay đổi lớn sẽ được thông báo trực tiếp qua ứng dụng hoặc cập nhật công khai tại trang này.</p>
+            </section>
+
+            <section class="info-box">
+                <h2>6. Liên hệ chúng tôi</h2>
+                <p>Nếu bạn có bất kỳ câu hỏi, phản hồi hoặc cần hỗ trợ liên quan đến Chính sách quyền riêng tư này, vui lòng liên hệ với chúng tôi qua:</p>
+                <p>✦ <strong>Email hỗ trợ:</strong> <a href="mailto:vuhiepkt2017@gmail.com">vuhiepkt2017@gmail.com</a></p>
+                <p>✦ <strong>Địa chỉ liên hệ:</strong> Hà Nội, Việt Nam</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Cập nhật lần cuối: 20 tháng 05, 2026</p>
+            <p>&copy; 2026 Lịch Âm & Nhắc Lịch. Mọi quyền được bảo lưu.</p>
+        </footer>
+    </div>
+</body>
+</html>
