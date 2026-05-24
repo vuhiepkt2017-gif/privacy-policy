@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách Quyền riêng tư - Healthy AI</title>
+    <!-- Google Fonts: Be Vietnam Pro for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2ecc71; /* Vibrant emerald green */
+            --primary-dark: #27ae60;
+            --primary-light: #e8f8f5;
+            --bg-gradient-start: #081c15; /* Elegant dark forest green gradient */
+            --bg-gradient-end: #1b4332;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --card-bg: rgba(22, 49, 39, 0.95);
+            --border-color: rgba(46, 204, 113, 0.15);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #a8ffb2 0%, var(--primary) 100%);
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(46, 204, 113, 0.4);
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(46, 204, 113, 0.4); }
+            100% { transform: scale(1.05); box-shadow: 0 0 30px rgba(46, 204, 113, 0.6); }
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            color: #081c15;
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #081c15;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(20px);
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 20px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #d1d5db;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: #d1d5db;
+        }
+
+        li::before {
+            content: '🌱';
+            position: absolute;
+            left: 0;
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0 20px 0;
+        }
+
+        .badge {
+            background: rgba(46, 204, 113, 0.08);
+            border: 1px solid rgba(46, 204, 113, 0.2);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .important-box {
+            background: rgba(239, 68, 68, 0.08);
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            border-radius: 0 16px 16px 0;
+            margin: 25px 0;
+        }
+
+        .important-box h3 {
+            color: #f87171;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .important-box p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: #fca5a5;
+        }
+
+        .info-box {
+            background: rgba(46, 204, 113, 0.04);
+            border: 1px dashed rgba(46, 204, 113, 0.3);
+            padding: 20px;
+            border-radius: 16px;
+            margin: 25px 0;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 1px dashed var(--primary);
+        }
+
+        a:hover {
+            color: #a8ffb2;
+            border-bottom-style: solid;
+        }
+
+        /* Language visibility rules */
+        [lang="en"] {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .content-card {
+                padding: 20px;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <span class="logo-icon">🥗</span>
+            </div>
+            <h1 class="vi-text">Chính sách Quyền riêng tư</h1>
+            <h1 class="en-text" style="display:none;">Privacy Policy</h1>
+            <p class="subtitle vi-text">Ứng dụng Healthy AI (Healthy AI Mobile App)</p>
+            <p class="subtitle en-text" style="display:none;">Healthy AI Mobile Application</p>
+        </header>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('vi')">Tiếng Việt</button>
+            <button class="lang-btn" onclick="switchLang('en')">English</button>
+        </div>
+
+        <!-- ==================== VIETNAMESE POLICY ==================== -->
+        <main class="content-card" id="policy-vi" lang="vi">
+            <div class="intro">
+                <p>Chào mừng bạn đến với ứng dụng <strong>Healthy AI</strong>. Chúng tôi cực kỳ coi trọng quyền riêng tư của bạn và cam kết bảo vệ dữ liệu cá nhân của người dùng một cách an toàn và minh bạch nhất. Chính sách quyền riêng tư này mô tả cách ứng dụng của chúng tôi hoạt động, các loại thông tin được xử lý, và cam kết tuyệt đối của chúng tôi đối với dữ liệu của bạn.</p>
+            </div>
+
+            <section>
+                <h2>1. Không thu thập thông tin cá nhân</h2>
+                <p>Chúng tôi phát triển <strong>Healthy AI</strong> theo nguyên tắc bảo mật tối đa. Chúng tôi <span class="highlight">KHÔNG thu thập, KHÔNG lưu trữ và KHÔNG bán</span> bất kỳ thông tin nhận dạng cá nhân nào (chẳng hạn như tên, số điện thoại, địa chỉ email hay danh bạ của bạn) trên máy chủ của chúng tôi.</p>
+            </section>
+
+            <section>
+                <h2>2. Các quyền truy cập của ứng dụng và cách sử dụng</h2>
+                <p>Để cung cấp tính năng phân tích dinh dưỡng món ăn bằng Trí tuệ nhân tạo (AI), ứng dụng cần và sử dụng một số quyền truy cập sau trên thiết bị của bạn:</p>
+                <ul>
+                    <li><span class="highlight">Quyền Camera (Máy ảnh):</span> Được sử dụng chỉ khi bạn chủ động nhấn chụp hình ảnh món ăn để yêu cầu AI phân tích dinh dưỡng trực tiếp.</li>
+                    <li><span class="highlight">Quyền Photos/Storage (Thư viện ảnh):</span> Cho phép bạn lựa chọn các hình ảnh món ăn đã chụp sẵn trong thiết bị để đưa vào phân tích.</li>
+                    <li><span class="highlight">Quyền Truy cập Internet (Internet Access):</span> Dùng để gửi hình ảnh món ăn bạn chọn một cách bảo mật tới dịch vụ AI của Google để phân tích dinh dưỡng và Calo, cũng như lấy gợi ý dinh dưỡng offline khi cần.</li>
+                </ul>
+                <div class="badge-list">
+                    <span class="badge">Quyền Camera</span>
+                    <span class="badge">Quyền Thư viện ảnh</span>
+                    <span class="badge">Truy cập Internet</span>
+                    <span class="badge">Lưu trữ cục bộ</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Quy trình xử lý hình ảnh & Dịch vụ bên thứ ba</h2>
+                <p>Ứng dụng có liên kết với dịch vụ chính thức từ đối tác công nghệ hàng đầu thế giới để thực hiện phân tích dữ liệu:</p>
+                <ul>
+                    <li><strong>Google Gemini API (Google Generative AI SDK):</strong> Khi bạn thực hiện quét một món ăn, hình ảnh món ăn sẽ được gửi một cách bảo mật trực tiếp thông qua API HTTPS của Google để xử lý. Mô hình AI của Google sẽ phân tích các chi tiết cấu trúc món ăn để ước tính các chỉ số dinh dưỡng (Calo, Đạm, Tinh bột, Béo, Vi chất, Kiêng kỵ dị ứng).</li>
+                    <li><strong>Bảo mật hình ảnh:</strong> Chúng tôi KHÔNG lưu trữ hình ảnh món ăn của bạn trên bất kỳ máy chủ nào của chúng tôi. Hình ảnh chỉ được tải lên tạm thời dưới dạng luồng dữ liệu bảo mật (Secure HTTPS Stream) để API của Google phân tích và trả kết quả về thiết bị của bạn ngay lập tức.</li>
+                    <li><strong>Firebase Analytics & Crashlytics:</strong> Chúng tôi sử dụng các công cụ phi danh tính này để theo dõi các lỗi phát sinh (crash) của ứng dụng và đo lường tần suất sử dụng tính năng một cách tổng quát nhất, giúp tối ưu hóa hiệu năng và độ mượt mà của app.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Lưu trữ dữ liệu cục bộ</h2>
+                <p>Toàn bộ thông tin cá nhân hóa của bạn bao gồm: <span class="highlight">Chiều cao, cân nặng, mục tiêu sức khỏe, lịch sử các bữa ăn đã phân tích trong ngày</span> đều được lưu trữ **cục bộ 100%** ngay trên bộ nhớ an toàn của thiết bị của bạn (thông qua SharedPreferences và SQLite nội bộ).</p>
+                <p>Dữ liệu này hoàn toàn nằm dưới quyền kiểm soát của bạn và không có bất kỳ bên thứ ba nào (bao gồm cả chúng tôi) có thể tiếp cận hoặc sao lưu trực tuyến dữ liệu này.</p>
+            </section>
+
+            <section class="important-box">
+                <h3>⚠️ Quyền xóa dữ liệu của bạn</h3>
+                <p>Bạn có toàn quyền kiểm soát và xóa vĩnh viễn dữ liệu của mình bất cứ lúc nào:</p>
+                <p style="margin-top: 10px;"><strong>Cách xóa dữ liệu:</strong></p>
+                <ul style="margin-top: 8px; margin-bottom: 0;">
+                    <li style="color: #fca5a5;">Mở ứng dụng Healthy AI -> Truy cập vào tab <strong>Cài đặt (Settings)</strong> -> Bấm chọn mục **Xóa toàn bộ lịch sử (Clear entire history)**.</li>
+                    <li style="color: #fca5a5;">Hoặc bạn chỉ cần gỡ cài đặt (Uninstall) ứng dụng Healthy AI khỏi thiết bị của bạn. Mọi dữ liệu về bữa ăn, mục tiêu và chỉ số sức khỏe sẽ tự động được hệ thống Android xóa sạch hoàn toàn khỏi thiết bị và không thể khôi phục.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Bảo mật dữ liệu</h2>
+                <p>Chúng tôi cam kết sử dụng các tiêu chuẩn mã hóa truyền dữ liệu HTTPS bảo mật cao nhất để bảo vệ luồng thông tin giao tiếp giữa ứng dụng của bạn và dịch vụ AI của Google, tránh mọi nguy cơ bị đánh cắp thông tin trên đường truyền.</p>
+            </section>
+
+            <section>
+                <h2>6. Trẻ em và Quyền riêng tư</h2>
+                <p>Ứng dụng Healthy AI hoàn toàn lành mạnh, an toàn và không nhằm mục đích thu thập bất kỳ thông tin nào từ bất kỳ ai, bao gồm cả trẻ em dưới 13 tuổi.</p>
+            </section>
+
+            <section class="info-box">
+                <h2>7. Thông tin liên hệ</h2>
+                <p>Nếu bạn có bất kỳ câu hỏi, phản hồi hoặc cần hỗ trợ liên quan đến Chính sách quyền riêng tư của Healthy AI, vui lòng liên hệ với nhà phát triển:</p>
+                <p>✦ <strong>Đại diện phát triển:</strong> VTD Studio / vuhiepkt2017-gif</p>
+                <p>✦ <strong>Email hỗ trợ:</strong> <a href="mailto:vuhiepkt2017@gmail.com">vuhiepkt2017@gmail.com</a></p>
+                <p>✦ <strong>Địa chỉ:</strong> Hà Nội, Việt Nam</p>
+            </section>
+        </main>
+
+        <!-- ==================== ENGLISH POLICY ==================== -->
+        <main class="content-card" id="policy-en" lang="en">
+            <div class="intro">
+                <p>Welcome to <strong>Healthy AI</strong>. We highly value your privacy and are committed to protecting our users' personal data in the most secure and transparent manner. This Privacy Policy describes how our mobile application works, what information is processed, and our absolute commitment to your data.</p>
+            </div>
+
+            <section>
+                <h2>1. No Personal Information Collection</h2>
+                <p>We built <strong>Healthy AI</strong> with maximum privacy in mind. We <span class="highlight">DO NOT collect, store, or sell</span> any personally identifiable information (such as your name, phone number, email address, or contact list) on our servers.</p>
+            </section>
+
+            <section>
+                <h2>2. App Permissions and Usage</h2>
+                <p>To provide Artificial Intelligence (AI) nutritional analysis of meals, the application requires and uses the following permissions on your device:</p>
+                <ul>
+                    <li><span class="highlight">Camera Permission:</span> Used solely when you actively capture a photo of your food for instant AI analysis.</li>
+                    <li><span class="highlight">Photos/Storage Permission:</span> Allows you to select pre-existing food images from your gallery for nutritional analysis.</li>
+                    <li><span class="highlight">Internet Access Permission:</span> Used to securely transmit your selected food image via Google's AI APIs to retrieve nutritional metrics, Calorie details, and health tips, and to get offline databases.</li>
+                </ul>
+                <div class="badge-list">
+                    <span class="badge">Camera Access</span>
+                    <span class="badge">Photo Gallery</span>
+                    <span class="badge">Internet Access</span>
+                    <span class="badge">Local Storage</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Image Processing & Third-Party Services</h2>
+                <p>The application integrates secure industry-standard services to perform advanced AI analysis:</p>
+                <ul>
+                    <li><strong>Google Gemini API (Google Generative AI SDK):</strong> When you scan a meal, the food image is securely sent directly over a secure HTTPS connection to Google's Generative AI servers. Google's model analyzes the meal's visual elements to estimate nutritional values (Calories, Protein, Carbs, Fat, Micronutrients, and allergy warnings).</li>
+                    <li><strong>Image Safety:</strong> We DO NOT save or store your food images on any servers. Images are uploaded temporarily as a secure HTTPS stream to Google's API and are discarded immediately after the analysis result is returned to your device.</li>
+                    <li><strong>Firebase Analytics & Crashlytics:</strong> We use these non-personally identifiable tools to monitor application crashes and analyze general feature usage frequency, helping us improve stability and app smoothness.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Secure Local Storage</h2>
+                <p>All your personalized health data, including <span class="highlight">height, weight, health goals, and meal history</span>, is stored **100% locally** within your device's secured internal storage (via SharedPreferences and local SQLite databases).</p>
+                <p>This data remains entirely under your control, and no third parties (including us) can access or back up this data online.</p>
+            </section>
+
+            <section class="important-box">
+                <h3>⚠️ Your Data Deletion Rights</h3>
+                <p>You have the absolute right to control and permanently delete your local data at any time:</p>
+                <p style="margin-top: 10px;"><strong>How to delete your data:</strong></p>
+                <ul style="margin-top: 8px; margin-bottom: 0;">
+                    <li style="color: #fca5a5;">Open Healthy AI -> Go to the <strong>Settings</strong> tab -> Select **Clear entire history**.</li>
+                    <li style="color: #fca5a5;">Or simply uninstall the Healthy AI application from your device. The Android system will automatically wipe all meal history, goals, and health logs completely from your device. This action is irreversible.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Information Security</h2>
+                <p>We commit to using industry-standard HTTPS encryption to secure all communication between your application and Google's AI APIs, preventing unauthorized interception of your data.</p>
+            </section>
+
+            <section>
+                <h2>6. Children's Privacy</h2>
+                <p>Healthy AI is a family-safe, utility application. We do not knowingly solicit or collect any data from anyone, including children under the age of 13.</p>
+            </section>
+
+            <section class="info-box">
+                <h2>7. Contact Information</h2>
+                <p>If you have any questions, feedback, or support requests regarding Healthy AI's Privacy Policy, please contact the developer:</p>
+                <p>✦ <strong>Developer Name:</strong> VTD Studio / vuhiepkt2017-gif</p>
+                <p>✦ <strong>Support Email:</strong> <a href="mailto:vuhiepkt2017@gmail.com">vuhiepkt2017@gmail.com</a></p>
+                <p>✦ <strong>Location:</strong> Hanoi, Vietnam</p>
+            </section>
+        </main>
+
+        <footer>
+            <p class="vi-text">Cập nhật lần cuối: 24 tháng 05, 2026</p>
+            <p class="en-text" style="display:none;">Last updated: May 24, 2026</p>
+            <p>&copy; 2026 Healthy AI. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            // Update active button state
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if (lang === 'vi') {
+                buttons[0].classList.add('active');
+            } else {
+                buttons[1].classList.add('active');
+            }
+
+            // Toggle content visibility
+            const policyVi = document.getElementById('policy-vi');
+            const policyEn = document.getElementById('policy-en');
+            const viTexts = document.querySelectorAll('.vi-text');
+            const enTexts = document.querySelectorAll('.en-text');
+
+            if (lang === 'vi') {
+                policyVi.style.display = 'block';
+                policyEn.style.display = 'none';
+                viTexts.forEach(el => el.style.display = '');
+                enTexts.forEach(el => el.style.display = 'none');
+            } else {
+                policyVi.style.display = 'none';
+                policyEn.style.display = 'block';
+                viTexts.forEach(el => el.style.display = 'none');
+                enTexts.forEach(el => el.style.display = '');
+            }
+        }
+
+        // Initialize default view to Vietnamese
+        switchLang('vi');
+    </script>
+</body>
+</html>
