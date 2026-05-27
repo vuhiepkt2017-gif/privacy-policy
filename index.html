@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách Quyền riêng tư - vuhiepkt2017-gif</title>
+    <style>
+        :root {
+            --primary: #6B8A7A;
+            --secondary: #95B095;
+            --background: #F3F5F8;
+            --surface: #FFFFFF;
+            --text-primary: #2D3748;
+            --text-secondary: #718096;
+            --border: #E2E8F0;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin: 0;
+        }
+
+        main {
+            flex: 1;
+            max-width: 800px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media(min-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--surface);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+            border-color: var(--primary);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+            color: var(--text-primary);
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 0 0 20px 0;
+            flex: 1;
+        }
+
+        .card-link {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+            background-color: var(--surface);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Chính sách Quyền riêng tư</h1>
+        <p class="subtitle">Danh sách chính sách cho các ứng dụng di động phát hành bởi <strong>vuhiepkt2017-gif</strong></p>
+    </header>
+
+    <main>
+        <div class="grid">
+            <!-- Blacklist Protector Card -->
+            <a href="blacklist-protector.html" class="card">
+                <div class="card-icon">🛡️</div>
+                <h2 class="card-title">Blacklist Protector</h2>
+                <p class="card-desc">Chính sách bảo mật dữ liệu cuộc gọi, phân quyền đa nhóm SaaS, bảo vệ danh bạ và lưu trữ an toàn trên Firebase đám mây.</p>
+                <div class="card-link">Xem chi tiết &rarr;</div>
+            </a>
+
+            <!-- Lunar Reminder Card -->
+            <a href="lunar-reminder.html" class="card">
+                <div class="card-icon">🌙</div>
+                <h2 class="card-title">Lịch Âm &amp; Nhắc Lịch</h2>
+                <p class="card-desc">Chính sách quyền riêng tư của ứng dụng xem lịch âm, nhắc nhở ngày mùng một ngày rằm và đồng bộ hóa ghi chú cá nhân.</p>
+                <div class="card-link">Xem chi tiết &rarr;</div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 vuhiepkt2017-gif. Bảo lưu mọi quyền.</p>
+    </footer>
+
+</body>
+</html>

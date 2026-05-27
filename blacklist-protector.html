@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách Quyền riêng tư - Blacklist Protector</title>
+    <style>
+        :root {
+            --primary: #6B8A7A;
+            --secondary: #95B095;
+            --background: #F3F5F8;
+            --surface: #FFFFFF;
+            --text-primary: #2D3748;
+            --text-secondary: #718096;
+            --border: #E2E8F0;
+            --accent: #E0B0B0;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: var(--text-primary);
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: var(--surface);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--background);
+            padding-bottom: 10px;
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background-color: #EAEFF5;
+            border-left: 4px solid var(--primary);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+            background-color: var(--surface);
+            margin-top: 60px;
+        }
+
+        .btn-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-home:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🛡️</div>
+        <h1>Chính sách Quyền riêng tư</h1>
+        <p class="subtitle">Ứng dụng di động: <strong>Blacklist Protector</strong> (com.VTDStadio.Blacklist)</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Giới thiệu chung</h2>
+            <p>Chào mừng bạn đến với <strong>Blacklist Protector</strong>. Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ dữ liệu cá nhân của bạn một cách tuyệt đối. Chính sách này mô tả cách ứng dụng của chúng tôi thu thập, xử lý và bảo mật dữ liệu của bạn khi bạn sử dụng dịch vụ.</p>
+            <p>Bằng cách tải xuống, cài đặt và sử dụng ứng dụng, bạn đồng ý với các điều khoản được quy định trong chính sách quyền riêng tư này.</p>
+        </section>
+
+        <section>
+            <h2>2. Quyền truy cập ứng dụng yêu cầu</h2>
+            <p>Để cung cấp tính năng phát hiện, cảnh báo cuộc gọi từ số điện thoại xấu và cho phép bạn đồng bộ dữ liệu nhanh chóng, ứng dụng yêu cầu các quyền truy cập hệ thống tối thiểu sau:</p>
+            <ul>
+                <li><strong>READ_PHONE_STATE & READ_CALL_LOG:</strong> Dùng để phát hiện số điện thoại đang thực hiện cuộc gọi đến hoặc cuộc gọi đi trên thiết bị theo thời gian thực, cho phép ứng dụng truy vấn nhanh trong cơ sở dữ liệu nhóm của bạn để đưa ra cảnh báo.</li>
+                <li><strong>SYSTEM_ALERT_WINDOW (Hiển thị trên ứng dụng khác):</strong> Dùng để vẽ cửa sổ nổi (Call Overlay) cảnh báo cuộc gọi xấu bằng thiết bị của bạn đè lên màn hình cuộc gọi đang diễn ra.</li>
+                <li><strong>READ_CONTACTS (Đọc danh bạ):</strong> Dùng để đối chiếu số điện thoại và hiển thị tên người gọi từ danh bạ nội bộ trên cửa sổ nổi để bạn dễ phân biệt. <em>Chúng tôi cam kết danh bạ cá nhân của bạn được xử lý hoàn toàn offline và KHÔNG bao giờ được tải lên bất kỳ máy chủ nào.</em></li>
+                <li><strong>INTERNET:</strong> Dùng để kết nối an toàn với máy chủ đám mây Google Firebase nhằm đồng bộ dữ liệu danh sách đen của các nhóm mà bạn tham gia.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Thu thập và Sử dụng Thông tin</h2>
+            <p>Blacklist Protector thu thập các thông tin sau để duy trì các chức năng SaaS đa nhóm:</p>
+            <ul>
+                <li><strong>Thông tin tài khoản đăng nhập (Google Email & Tên Google):</strong> Dùng để xác thực định danh tài khoản duy nhất của bạn trên hệ thống, phân loại quyền thành viên (Admin/Thành viên) và phê duyệt quyền gia nhập nhóm.</li>
+                <li><strong>Dữ liệu danh sách đen (Blacklist):</strong> Bao gồm Số điện thoại, Tên khách hàng, Lý do xấu (bom hàng, lừa đảo...) và Ghi chú giao hàng do chính bạn hoặc các thành viên trong nhóm của bạn chủ động đăng tải.</li>
+            </ul>
+            <div class="highlight-box">
+                <p>🔒 Bảo mật số điện thoại: Đối với các thành viên thông thường (Shipper/Nhân viên), số điện thoại trong danh sách đen sẽ tự động bị ẩn đi 5 số ở giữa (Ví dụ: 09*****567) để bảo mật thông tin tối đa, ngăn ngừa hành vi lạm dụng hoặc rò rỉ dữ liệu cá nhân của khách hàng. Chỉ có tài khoản Admin của nhóm mới có quyền xem đầy đủ số điện thoại.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Bảo mật dữ liệu</h2>
+            <p>Dữ liệu của bạn được lưu trữ trên hạ tầng đám mây bảo mật hàng đầu của Google Firebase Firestore. Chúng tôi sử dụng các giao thức mã hóa an toàn và áp dụng bộ quy tắc bảo mật dữ liệu nghiêm ngặt để đảm bảo dữ liệu của các nhóm hoạt động độc lập và cô lập tuyệt đối, tránh việc truy cập trái phép từ bên ngoài.</p>
+        </section>
+
+        <section>
+            <h2>5. Quyền của người dùng và Xóa dữ liệu</h2>
+            <p>Bạn có toàn quyền kiểm soát dữ liệu cá nhân và dữ liệu do bạn đăng tải:</p>
+            <ul>
+                <li>Bạn có quyền chỉnh sửa, cập nhật hoặc xóa bỏ hoàn toàn bất kỳ số điện thoại nào trong danh sách đen thuộc nhóm bạn quản trị.</li>
+                <li>Bạn có quyền đăng xuất và ngắt kết nối tài khoản bất kỳ lúc nào.</li>
+                <li>Bạn có thể gửi yêu cầu xóa hoàn toàn tài khoản của mình cùng tất cả dữ liệu liên quan khỏi hệ thống của chúng tôi bất cứ lúc nào bằng cách liên hệ qua email hỗ trợ của chúng tôi.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Liên hệ hỗ trợ</h2>
+            <p>Nếu có bất kỳ câu hỏi, thắc mắc hoặc yêu cầu nào liên quan đến Chính sách Quyền riêng tư này hoặc việc xóa dữ liệu cá nhân của bạn, vui lòng liên hệ với nhà phát triển:</p>
+            <p>📧 Email hỗ trợ: <strong>vuhiepkt2017@gmail.com</strong></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Cập nhật lần cuối: Ngày 27 tháng 05 năm 2026</p>
+        <p>&copy; 2026 Blacklist Protector. Bảo lưu mọi quyền.</p>
+        <a href="index.html" class="btn-home">Quay lại trang chủ</a>
+    </footer>
+
+</body>
+</html>
