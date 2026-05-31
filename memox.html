@@ -269,65 +269,76 @@
 
         <main class="content-card">
             <div class="intro">
-                <p>Chào mừng bạn đến với <strong>MemoX</strong>. Chúng tôi hiểu rằng thông tin cá nhân, tài khoản và mật khẩu của bạn là vô cùng nhạy cảm và cần được bảo vệ tuyệt đối. Chúng tôi cam kết tôn trọng quyền riêng tư của bạn bằng việc áp dụng các tiêu chuẩn an ninh cao nhất.</p>
+                <p>Chào mừng bạn đến với <strong>MemoX</strong>. Chúng tôi hiểu rằng thông tin cá nhân, tài khoản và các ghi chú mật của bạn là vô cùng nhạy cảm. Chúng tôi cam kết bảo vệ thông tin cá nhân và dữ liệu ghi chú của bạn bằng việc áp dụng các tiêu chuẩn an ninh cao nhất kết hợp với hạ tầng lưu trữ bảo mật của Google Firebase.</p>
             </div>
 
             <section class="secure-box">
-                <h3>🛡️ Cam kết An toàn & Ngoại tuyến (100% Offline Security)</h3>
-                <p>Mọi nội dung ghi chú bảo mật, mật khẩu hay tài khoản ngân hàng do bạn nhập vào MemoX **đều được mã hóa cực kỳ an toàn bằng tiêu chuẩn mã hóa AES-256 trực tiếp ngay trên thiết bị của bạn**.</p>
-                <p style="margin-top: 8px;">Chúng tôi hoàn toàn **KHÔNG** thu thập, KHÔNG lưu trữ dữ liệu của bạn trên máy chủ ngoại vi, và KHÔNG bao giờ chia sẻ dữ liệu ghi chú của bạn với bất kỳ ai dưới mọi hình thức.</p>
+                <h3>🛡️ Bảo Mật Mã Hóa & Đồng Bộ Đám Mây Đáng Tin Cậy</h3>
+                <p>Mọi nội dung ghi chú bảo mật (tài khoản ngân hàng, mật khẩu, thông tin cá nhân) do bạn nhập vào MemoX **đều được mã hóa cực kỳ an toàn bằng tiêu chuẩn mã hóa AES-256** trước khi đồng bộ lên cơ sở dữ liệu đám mây Firebase.</p>
+                <p style="margin-top: 8px;">Dữ liệu của bạn được quản lý và phân tách riêng biệt theo từng Tài khoản Google cá nhân. Chúng tôi cam kết **KHÔNG** đọc, **KHÔNG** chia sẻ và **KHÔNG** sử dụng dữ liệu ghi chú của bạn cho bất kỳ mục đích nào ngoài việc đồng bộ dữ liệu cho riêng bạn.</p>
             </section>
 
             <section>
-                <h2>1. Thông tin chúng tôi xử lý</h2>
-                <p>MemoX là một ứng dụng ưu tiên tính năng bảo mật ngoại tuyến (Offline-First). Ứng dụng chỉ xử lý các loại dữ liệu sau:</p>
+                <h2>1. Thông tin chúng tôi thu thập</h2>
+                <p>Để hỗ trợ đăng nhập và đồng bộ hóa ghi chú bảo mật cũng như danh sách mua sắm giữa các thiết bị khác nhau của bạn, MemoX xử lý các thông tin sau:</p>
                 <ul>
-                    <li><span class="highlight">Ghi chú tài khoản & mật khẩu:</span> Được lưu trữ cục bộ trên máy của bạn và đã được mã hóa AES-256.</li>
-                    <li><span class="highlight">Danh sách mua sắm:</span> Các mặt hàng cần mua, số lượng, đơn giá và trạng thái do chính bạn tạo để lên lịch mua sắm cá nhân.</li>
-                    <li><span class="highlight">Xác thực sinh trắc học (Vân tay/PIN):</span> Ứng dụng sử dụng Thư viện Sinh trắc học chính thức của hệ thống Android. Quyết định mở khóa thành công hay thất bại hoàn toàn do phần cứng bảo mật của thiết bị (TEE) xử lý và trả kết quả về ứng dụng, MemoX **hoàn toàn không lưu giữ vân tay hay mật mã của bạn**.</li>
+                    <li><span class="highlight">Thông tin tài khoản Google:</span> Khi bạn chọn "Đăng nhập bằng Google", ứng dụng sẽ thu thập địa chỉ email, tên hiển thị và ID người dùng Google để xác thực và tạo tài khoản duy nhất trên hệ thống Firebase Auth.</li>
+                    <li><span class="highlight">Nội dung ghi chú & Mua sắm:</span> Các tệp tin ghi chú được mã hóa AES-256 cục bộ và danh sách mua sắm của bạn sẽ được lưu trữ đồng bộ trên cơ sở dữ liệu đám mây của Firebase (Firestore / Realtime Database) gắn liền với mã định danh tài khoản cá nhân của bạn.</li>
+                    <li><span class="highlight">Xác thực sinh trắc học (Vân tay/PIN):</span> Ứng dụng sử dụng Thư viện Sinh trắc học của hệ thống Android. Quyết định mở khóa hoàn toàn do phần cứng bảo mật của thiết bị (TEE) xử lý và trả kết quả thành công/thất bại về ứng dụng, MemoX **hoàn toàn không thu thập hay lưu giữ vân tay hay mật mã mở khóa của bạn**.</li>
                 </ul>
                 <div class="badge-list">
+                    <span class="badge">Đăng nhập Google (OAuth)</span>
+                    <span class="badge">Firebase Auth</span>
                     <span class="badge">Ghi chú Mã hóa AES-256</span>
-                    <span class="badge">Danh sách Mua Sắm</span>
-                    <span class="badge">Sinh trắc học Hệ thống</span>
-                    <span class="badge">Dữ liệu lưu 100% Offline</span>
+                    <span class="badge">Cơ sở dữ liệu đám mây Firebase</span>
+                    <span class="badge">Xác thực Vân tay hệ thống</span>
                 </div>
             </section>
 
             <section>
                 <h2>2. Cách chúng tôi sử dụng thông tin</h2>
-                <p>Thông tin do bạn nhập vào chỉ được sử dụng cho các mục đích thiết yếu và trực tiếp sau:</p>
+                <p>Thông tin thu thập được sử dụng duy nhất cho các mục đích hợp pháp sau:</p>
                 <ul>
-                    <li><strong>Quản lý ghi chú cá nhân:</strong> Hiển thị, chỉnh sửa, mã hóa nội dung ghi chú và bảo mật bằng cảm biến vân tay của bạn.</li>
-                    <li><strong>Lên danh sách chi tiêu:</strong> Tự động tính toán tổng số tiền trong giỏ hàng mua sắm theo thời gian thực giúp bạn kiểm soát ngân sách cá nhân hiệu quả nhất.</li>
+                    <li><strong>Đồng bộ dữ liệu đa thiết bị:</strong> Lưu trữ và đồng bộ hóa các ghi chú bảo mật và giỏ hàng mua sắm của bạn lên đám mây, giúp bạn dễ dàng truy cập và quản lý dữ liệu trên nhiều điện thoại khác nhau bằng cách đăng nhập vào cùng một tài khoản Google.</li>
+                    <li><strong>Xác thực tài khoản và bảo mật:</strong> Sử dụng hệ thống Firebase Authentication để đảm bảo chỉ chính bạn mới có quyền truy cập vào két sắt ghi chú được mã hóa của mình.</li>
+                    <li><strong>Tự động tính toán chi tiêu:</strong> Xử lý dữ liệu số lượng, đơn giá của danh sách mua sắm ngay trong ứng dụng để tính tổng tiền giỏ hàng theo thời gian thực.</li>
                 </ul>
             </section>
 
             <section>
-                <h2>3. Quyền hạn thiết bị</h2>
-                <p>Để hoạt động hiệu quả, MemoX yêu cầu các quyền hạn hệ thống sau:</p>
+                <h2>3. Chia sẻ dữ liệu với bên thứ ba</h2>
+                <p>Chúng tôi tuyệt đối không bán, trao đổi hoặc chuyển giao dữ liệu cá nhân hay nội dung ghi chú của bạn cho bên thứ ba. Để thực hiện chức năng đồng bộ đám mây và xác thực tài khoản, chúng tôi sử dụng các dịch vụ chính thức và vô cùng bảo mật của Google:</p>
                 <ul>
-                    <li><span class="highlight">USE_BIOMETRIC / USE_FINGERPRINT:</span> Cho phép ứng dụng gọi hộp thoại xác thực bằng vân tay hoặc nhận diện khuôn mặt của hệ thống để mở khóa nhanh ghi chú bảo mật.</li>
+                    <li><strong>Google Identity Service:</strong> Dịch vụ đăng nhập bằng tài khoản Google (OAuth 2.0).</li>
+                    <li><strong>Google Firebase Authentication:</strong> Quản lý đăng nhập và phiên làm việc bảo mật của người dùng.</li>
+                    <li><strong>Google Firebase Database (Firestore / Realtime Database):</strong> Cơ sở dữ liệu đám mây bảo mật cao để lưu trữ các ghi chú đã mã hóa và danh sách mua sắm.</li>
                 </ul>
             </section>
 
             <section>
-                <h2>4. Chia sẻ dữ liệu với bên thứ ba</h2>
-                <p>Do ứng dụng hoạt động ngoại tuyến, chúng tôi **không gửi hay chia sẻ** bất kỳ thông tin nhạy cảm nào với bất kỳ dịch vụ hay bên thứ ba nào. Mọi dữ liệu chỉ nằm duy nhất trên điện thoại cá nhân của bạn.</p>
+                <h2>4. Bảo mật dữ liệu đám mây</h2>
+                <p>Dữ liệu của bạn được bảo mật tuyệt đối thông qua cơ chế mã hóa kép:</p>
+                <ul>
+                    <li>Nội dung ghi chú nhạy cảm được mã hóa AES-256 ngay trên điện thoại trước khi truyền đi.</li>
+                    <li>Đường truyền dữ liệu lên máy chủ đám mây của Google Firebase được bảo vệ bằng giao thức HTTPS/SSL mã hóa cao.</li>
+                    <li>Chúng tôi thiết lập các Quy tắc bảo mật (Firebase Security Rules) cực kỳ nghiêm ngặt trên máy chủ đám mây để ngăn chặn triệt để mọi truy cập trái phép từ tài khoản khác.</li>
+                </ul>
             </section>
 
-            <section>
-                <h2>5. Bảo mật dữ liệu & Xóa thông tin</h2>
-                <p>Do dữ liệu chỉ được lưu trữ cục bộ trên thiết bị của bạn:</p>
-                <ul>
-                    <li>Nếu bạn muốn xóa toàn bộ ghi chú và danh sách mua sắm, bạn chỉ cần gỡ bỏ (Uninstall) ứng dụng MemoX khỏi thiết bị. Hệ điều hành Android sẽ tự động xóa sạch toàn bộ dữ liệu đi kèm.</li>
-                    <li>Bạn cũng có thể sử dụng chức năng **"Xóa toàn bộ dữ liệu ứng dụng"** có sẵn trong mục Cài đặt của ứng dụng để làm sạch dữ liệu lập tức.</li>
+            <section class="secure-box" style="background: rgba(239, 68, 68, 0.08); border-left-color: #ef4444;">
+                <h3 style="color: #f87171;">⚠️ Quyền của bạn & Yêu cầu xóa vĩnh viễn dữ liệu</h3>
+                <p style="color: #fca5a5;">Bạn có toàn quyền kiểm soát dữ liệu của mình. Bạn có thể thêm, chỉnh sửa hoặc xóa thủ công các ghi chú/danh sách mua sắm bất kỳ lúc nào.</p>
+                <p style="margin-top: 10px; color: #ffffff; font-weight: bold;">Yêu cầu xóa tài khoản và dữ liệu đám mây:</p>
+                <p style="color: #fca5a5;">Nếu bạn muốn ngừng sử dụng ứng dụng và xóa vĩnh viễn tài khoản Google kèm theo toàn bộ dữ liệu ghi chú đã đồng bộ khỏi hệ thống đám mây Firebase của chúng tôi, bạn có thể thực hiện bằng hai cách:</p>
+                <ul style="margin-top: 8px; margin-bottom: 0;">
+                    <li style="color: #fca5a5;">Vào mục **Cài đặt (Settings)** trong ứng dụng ➔ Chọn **Xóa tài khoản đám mây (Delete Cloud Account)**. Hệ thống Firebase sẽ tự động xóa sạch vĩnh viễn thông tin đăng nhập và mọi ghi chú đi kèm của bạn ngay lập tức.</li>
+                    <li style="color: #fca5a5;">Hoặc gửi email yêu cầu xóa tài khoản đến hòm thư hỗ trợ của chúng tôi tại: <a href="mailto:vuhiepkt2017@gmail.com" style="color: #ffffff; text-decoration: underline; font-weight: 600;">vuhiepkt2017@gmail.com</a>. Yêu cầu xóa dữ liệu của bạn trên Firebase sẽ được thực thi trong vòng 24 giờ làm việc.</li>
                 </ul>
             </section>
 
             <section class="info-box">
-                <h2>6. Liên hệ hỗ trợ</h2>
-                <p>Nếu bạn có bất kỳ câu hỏi, phản hồi hoặc ý kiến góp ý liên quan đến Chính sách quyền riêng tư này, vui lòng liên hệ với nhà phát triển qua:</p>
+                <h2>5. Liên hệ hỗ trợ</h2>
+                <p>Nếu bạn có bất kỳ câu hỏi, phản hồi hoặc yêu cầu liên quan đến Chính sách quyền riêng tư này, vui lòng liên hệ với nhà phát triển qua:</p>
                 <p style="margin-top: 8px;">✦ <strong>Email hỗ trợ:</strong> <a href="mailto:vuhiepkt2017@gmail.com">vuhiepkt2017@gmail.com</a></p>
                 <p>✦ <strong>Địa chỉ liên hệ:</strong> Hà Nội, Việt Nam</p>
             </section>
