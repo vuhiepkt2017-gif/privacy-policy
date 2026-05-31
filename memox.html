@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách Quyền riêng tư - MemoX</title>
+    <!-- Google Fonts: Be Vietnam Pro for premium Vietnamese typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1; /* Indigo rực rỡ */
+            --primary-dark: #4f46e5;
+            --primary-light: #e0e7ff;
+            --secondary: #06b6d4; /* Neon Cyan */
+            --bg-gradient-start: #0f172a; /* Deep Space Navy */
+            --bg-gradient-end: #020617;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(99, 102, 241, 0.15);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.01);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #a5b4fc 0%, var(--primary) 100%);
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
+            100% { transform: scale(1.05); box-shadow: 0 0 30px rgba(99, 102, 241, 0.6); }
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            color: #0f172a;
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(20px);
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 20px;
+            background-color: var(--secondary);
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #cbd5e1;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+        li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        .highlight {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0 20px 0;
+        }
+
+        .badge {
+            background: rgba(6, 182, 212, 0.08);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            color: var(--secondary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .secure-box {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            border-radius: 0 16px 16px 0;
+            margin: 25px 0;
+        }
+
+        .secure-box h3 {
+            color: #34d399;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .secure-box p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: #a7f3d0;
+        }
+
+        .info-box {
+            background: rgba(99, 102, 241, 0.04);
+            border: 1px dashed rgba(99, 102, 241, 0.3);
+            padding: 20px;
+            border-radius: 16px;
+            margin: 25px 0;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 1px dashed var(--secondary);
+        }
+
+        a:hover {
+            color: #67e8f9;
+            border-bottom-style: solid;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .content-card {
+                padding: 20px;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <span class="logo-icon">🔐</span>
+            </div>
+            <h1>Chính sách Quyền riêng tư</h1>
+            <p class="subtitle">Ứng dụng Ghi chú Bảo mật & Mua sắm (MemoX)</p>
+        </header>
+
+        <main class="content-card">
+            <div class="intro">
+                <p>Chào mừng bạn đến với <strong>MemoX</strong>. Chúng tôi hiểu rằng thông tin cá nhân, tài khoản và mật khẩu của bạn là vô cùng nhạy cảm và cần được bảo vệ tuyệt đối. Chúng tôi cam kết tôn trọng quyền riêng tư của bạn bằng việc áp dụng các tiêu chuẩn an ninh cao nhất.</p>
+            </div>
+
+            <section class="secure-box">
+                <h3>🛡️ Cam kết An toàn & Ngoại tuyến (100% Offline Security)</h3>
+                <p>Mọi nội dung ghi chú bảo mật, mật khẩu hay tài khoản ngân hàng do bạn nhập vào MemoX **đều được mã hóa cực kỳ an toàn bằng tiêu chuẩn mã hóa AES-256 trực tiếp ngay trên thiết bị của bạn**.</p>
+                <p style="margin-top: 8px;">Chúng tôi hoàn toàn **KHÔNG** thu thập, KHÔNG lưu trữ dữ liệu của bạn trên máy chủ ngoại vi, và KHÔNG bao giờ chia sẻ dữ liệu ghi chú của bạn với bất kỳ ai dưới mọi hình thức.</p>
+            </section>
+
+            <section>
+                <h2>1. Thông tin chúng tôi xử lý</h2>
+                <p>MemoX là một ứng dụng ưu tiên tính năng bảo mật ngoại tuyến (Offline-First). Ứng dụng chỉ xử lý các loại dữ liệu sau:</p>
+                <ul>
+                    <li><span class="highlight">Ghi chú tài khoản & mật khẩu:</span> Được lưu trữ cục bộ trên máy của bạn và đã được mã hóa AES-256.</li>
+                    <li><span class="highlight">Danh sách mua sắm:</span> Các mặt hàng cần mua, số lượng, đơn giá và trạng thái do chính bạn tạo để lên lịch mua sắm cá nhân.</li>
+                    <li><span class="highlight">Xác thực sinh trắc học (Vân tay/PIN):</span> Ứng dụng sử dụng Thư viện Sinh trắc học chính thức của hệ thống Android. Quyết định mở khóa thành công hay thất bại hoàn toàn do phần cứng bảo mật của thiết bị (TEE) xử lý và trả kết quả về ứng dụng, MemoX **hoàn toàn không lưu giữ vân tay hay mật mã của bạn**.</li>
+                </ul>
+                <div class="badge-list">
+                    <span class="badge">Ghi chú Mã hóa AES-256</span>
+                    <span class="badge">Danh sách Mua Sắm</span>
+                    <span class="badge">Sinh trắc học Hệ thống</span>
+                    <span class="badge">Dữ liệu lưu 100% Offline</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Cách chúng tôi sử dụng thông tin</h2>
+                <p>Thông tin do bạn nhập vào chỉ được sử dụng cho các mục đích thiết yếu và trực tiếp sau:</p>
+                <ul>
+                    <li><strong>Quản lý ghi chú cá nhân:</strong> Hiển thị, chỉnh sửa, mã hóa nội dung ghi chú và bảo mật bằng cảm biến vân tay của bạn.</li>
+                    <li><strong>Lên danh sách chi tiêu:</strong> Tự động tính toán tổng số tiền trong giỏ hàng mua sắm theo thời gian thực giúp bạn kiểm soát ngân sách cá nhân hiệu quả nhất.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Quyền hạn thiết bị</h2>
+                <p>Để hoạt động hiệu quả, MemoX yêu cầu các quyền hạn hệ thống sau:</p>
+                <ul>
+                    <li><span class="highlight">USE_BIOMETRIC / USE_FINGERPRINT:</span> Cho phép ứng dụng gọi hộp thoại xác thực bằng vân tay hoặc nhận diện khuôn mặt của hệ thống để mở khóa nhanh ghi chú bảo mật.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Chia sẻ dữ liệu với bên thứ ba</h2>
+                <p>Do ứng dụng hoạt động ngoại tuyến, chúng tôi **không gửi hay chia sẻ** bất kỳ thông tin nhạy cảm nào với bất kỳ dịch vụ hay bên thứ ba nào. Mọi dữ liệu chỉ nằm duy nhất trên điện thoại cá nhân của bạn.</p>
+            </section>
+
+            <section>
+                <h2>5. Bảo mật dữ liệu & Xóa thông tin</h2>
+                <p>Do dữ liệu chỉ được lưu trữ cục bộ trên thiết bị của bạn:</p>
+                <ul>
+                    <li>Nếu bạn muốn xóa toàn bộ ghi chú và danh sách mua sắm, bạn chỉ cần gỡ bỏ (Uninstall) ứng dụng MemoX khỏi thiết bị. Hệ điều hành Android sẽ tự động xóa sạch toàn bộ dữ liệu đi kèm.</li>
+                    <li>Bạn cũng có thể sử dụng chức năng **"Xóa toàn bộ dữ liệu ứng dụng"** có sẵn trong mục Cài đặt của ứng dụng để làm sạch dữ liệu lập tức.</li>
+                </ul>
+            </section>
+
+            <section class="info-box">
+                <h2>6. Liên hệ hỗ trợ</h2>
+                <p>Nếu bạn có bất kỳ câu hỏi, phản hồi hoặc ý kiến góp ý liên quan đến Chính sách quyền riêng tư này, vui lòng liên hệ với nhà phát triển qua:</p>
+                <p style="margin-top: 8px;">✦ <strong>Email hỗ trợ:</strong> <a href="mailto:vuhiepkt2017@gmail.com">vuhiepkt2017@gmail.com</a></p>
+                <p>✦ <strong>Địa chỉ liên hệ:</strong> Hà Nội, Việt Nam</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Cập nhật lần cuối: 31 tháng 05, 2026</p>
+            <p>&copy; 2026 MemoX. Mọi quyền được bảo lưu.</p>
+        </footer>
+    </div>
+</body>
+</html>
