@@ -4,6 +4,7 @@ This repository hosts the public privacy policies for mobile applications publis
 
 ## Active Policies
 
+* 📝 **MemoX (Secure Notes & Shopping List)**: [Privacy Policy (Vietnamese)](memox.html) | [Terms of Service (Vietnamese)](memox-terms.html)
 * 🛡️ **Blacklist Protector (Call Blacklist & Caller ID Warning)**: [Privacy Policy (Vietnamese)](blacklist-protector.html) | [Terms of Service (Vietnamese)](blacklist-terms.html)
 * 🌙 **Lịch Âm & Nhắc Lịch (Lunar Reminder)**: [Privacy Policy (Vietnamese)](lunar-reminder.html)
 * 🥗 **Healthy AI (Dinh Dưỡng Calo AI)**: [Privacy Policy (Vietnamese & English)](healthy-ai.html)

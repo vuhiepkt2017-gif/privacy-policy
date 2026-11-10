@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều khoản Dịch vụ - MemoX</title>
+    <!-- Google Fonts: Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #e0e7ff;
+            --secondary: #06b6d4;
+            --bg-gradient-start: #0f172a;
+            --bg-gradient-end: #020617;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(99, 102, 241, 0.15);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.01);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #a5b4fc 0%, var(--primary) 100%);
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            color: #0f172a;
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(20px);
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 20px;
+            background-color: var(--secondary);
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #cbd5e1;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        .info-box {
+            background: rgba(99, 102, 241, 0.08);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 25px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .nav-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 640px) {
+            .content-card {
+                padding: 24px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <span class="logo-icon">📜</span>
+            </div>
+            <h1>Điều khoản Dịch vụ</h1>
+            <p class="subtitle">Ứng dụng MemoX - Secure Notes & Shopping</p>
+            <div class="nav-links">
+                <a href="memox.html">Chính sách Quyền riêng tư</a>
+                <a href="memox-terms.html">Điều khoản Dịch vụ</a>
+            </div>
+        </header>
+
+        <main class="content-card">
+            <div class="intro">
+                Chào mừng bạn đến với <strong>MemoX</strong>. Bằng việc tải về, cài đặt hoặc sử dụng ứng dụng MemoX, bạn đồng ý tuân thủ và chịu sự ràng buộc của các Điều khoản Dịch vụ này. Nếu bạn không đồng ý với bất kỳ phần nào của điều khoản, vui lòng không tiếp tục sử dụng ứng dụng.
+            </div>
+
+            <section>
+                <h2>1. Mô tả Dịch vụ</h2>
+                <p><strong>MemoX</strong> là ứng dụng di động hỗ trợ người dùng ghi chú an toàn, quản lý danh sách mua sắm thông minh và đồng bộ hóa đám mây đa thiết bị. Các tính năng bao gồm:</p>
+                <ul>
+                    <li><strong>Ghi chú bảo mật:</strong> Tạo, khóa và bảo vệ nội dung ghi chú bằng mã PIN bảo mật và sinh trắc học (vân tay / nhận diện khuôn mặt).</li>
+                    <li><strong>Danh sách mua sắm & Giỏ hàng gia đình:</strong> Quản lý danh mục mua sắm, chia sẻ mã kết nối giỏ hàng dùng chung giữa các thành viên gia đình theo thời gian thực.</li>
+                    <li><strong>Sao lưu đám mây:</strong> Lưu trữ và khôi phục dữ liệu ghi chú qua tài khoản Google.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Tài khoản và Bảo mật</h2>
+                <p>Khi sử dụng tính năng đồng bộ đám mây và kết nối gia đình, bạn đăng nhập thông qua hệ thống tài khoản Google của mình:</p>
+                <ul>
+                    <li>Bạn chịu trách nhiệm duy trì tính bảo mật cho thiết bị, mã PIN ứng dụng và tài khoản Google cá nhân.</li>
+                    <li>Bạn đồng ý thông báo ngay cho chúng tôi nếu phát hiện bất kỳ hành vi truy cập trái phép hoặc vi phạm an ninh nào.</li>
+                    <li>Chúng tôi không chịu trách nhiệm đối với bất kỳ mất mát dữ liệu nào do việc bạn để lộ thông tin xác thực hoặc mất quyền kiểm soát thiết bị cá nhân.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Gói thuê bao VIP Pro & Thanh toán (Google Play In-app Billing)</h2>
+                <p>MemoX cung cấp phiên bản miễn phí và phiên bản nâng cấp <strong>VIP Pro</strong> với các tính năng nâng cao (đồng bộ đám mây không giới hạn, không quảng cáo, mở rộng két sắt ghi chú bảo mật):</p>
+                
+                <div class="info-box">
+                    <p style="color: #ffffff; font-weight: bold; margin-bottom: 8px;">💳 Các gói dịch vụ VIP Pro:</p>
+                    <ul style="margin-bottom: 0;">
+                        <li><strong>Gói Tháng (Monthly Subscription):</strong> Gia hạn định kỳ mỗi tháng.</li>
+                        <li><strong>Gói Năm (Yearly Subscription):</strong> Gia hạn định kỳ mỗi năm với mức giá ưu đãi.</li>
+                        <li><strong>Gói Trọn đời (Lifetime Purchase):</strong> Thanh toán một lần duy nhất, sở hữu quyền lợi VIP Pro vĩnh viễn.</li>
+                    </ul>
+                </div>
+
+                <p><strong>Cơ chế thanh toán và gia hạn tự động:</strong></p>
+                <ul>
+                    <li>Tất cả các giao dịch thanh toán trong ứng dụng đều được xử lý an toàn và trực tiếp qua <strong>Google Play Billing</strong> của Google.</li>
+                    <li>Các gói thuê bao định kỳ (Tháng, Năm) sẽ <strong>tự động gia hạn</strong> trừ khi bạn hủy đăng ký ít nhất 24 giờ trước khi chu kỳ thanh toán hiện tại kết thúc.</li>
+                    <li>Tài khoản Google Play của bạn sẽ bị tính phí gia hạn trong vòng 24 giờ trước khi kết thúc chu kỳ hiện tại theo mức giá đã công bố.</li>
+                </ul>
+
+                <p><strong>Cách hủy gói thuê bao:</strong></p>
+                <ul>
+                    <li>Bạn có thể quản lý hoặc hủy bỏ gói thuê bao bất kỳ lúc nào bằng cách: Mở ứng dụng <strong>Google Play Store</strong> ➔ Nhấn vào biểu tượng tài khoản ở góc trên bên phải ➔ Chọn <strong>Thanh toán và gói thuê bao (Payments & subscriptions)</strong> ➔ <strong>Gói thuê bao (Subscriptions)</strong> ➔ Chọn <strong>MemoX</strong> và nhấn <strong>Hủy gói thuê bao</strong>.</li>
+                    <li>Sau khi hủy, bạn vẫn được sử dụng toàn bộ tính năng VIP Pro cho đến khi hết chu kỳ thanh toán hiện tại.</li>
+                </ul>
+
+                <p><strong>Chính sách hoàn tiền:</strong></p>
+                <p>Mọi yêu cầu hoàn tiền cho các giao dịch mua trong ứng dụng hoặc gói thuê bao đều được xử lý theo <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" style="color: var(--secondary); text-decoration: underline;">Chính sách hoàn tiền của Google Play</a>.</p>
+            </section>
+
+            <section>
+                <h2>4. Quyền sở hữu nội dung người dùng</h2>
+                <p>Bạn giữ toàn bộ quyền sở hữu trí tuệ đối với các nội dung ghi chú, văn bản và danh sách mua sắm do bạn tạo ra trong MemoX. Chúng tôi không tuyên bố quyền sở hữu hay sử dụng các nội dung cá nhân của bạn cho bất kỳ mục đích thương mại nào.</p>
+            </section>
+
+            <section>
+                <h2>5. Giới hạn trách nhiệm</h2>
+                <p>Ứng dụng MemoX được cung cấp trên nguyên tắc "nguyên trạng" (as-is). Trong giới hạn tối đa được pháp luật cho phép, nhà phát triển không chịu trách nhiệm đối với bất kỳ thiệt hại trực tiếp, gián tiếp, ngẫu nhiên hoặc do hậu quả phát sinh từ việc sử dụng hoặc không thể sử dụng ứng dụng.</p>
+            </section>
+
+            <section>
+                <h2>6. Thay đổi Điều khoản Dịch vụ</h2>
+                <p>Chúng tôi có quyền cập nhật hoặc điều chỉnh Điều khoản Dịch vụ này vào bất kỳ lúc nào để phản ánh những thay đổi về tính năng ứng dụng hoặc yêu cầu pháp lý. Bản cập nhật mới nhất sẽ được đăng tải công khai tại trang này với ngày hiệu lực được ghi rõ ở cuối trang.</p>
+            </section>
+
+            <section class="info-box">
+                <h2>7. Thông tin Liên hệ</h2>
+                <p>Mọi thắc mắc, hỗ trợ kỹ thuật hoặc khiếu nại liên quan đến Điều khoản Dịch vụ của MemoX, vui lòng liên hệ:</p>
+                <p style="margin-top: 8px;">✦ <strong>Email hỗ trợ:</strong> <a href="mailto:vuhiepkt2017@gmail.com" style="color: #ffffff; font-weight: 600;">vuhiepkt2017@gmail.com</a></p>
+                <p>✦ <strong>Nhà phát triển:</strong> VTDStadio</p>
+                <p>✦ <strong>Địa chỉ:</strong> Hà Nội, Việt Nam</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Cập nhật lần cuối: 10 tháng 11, 2026</p>
+            <p>&copy; 2026 MemoX - VTDStadio. Mọi quyền được bảo lưu.</p>
+        </footer>
+    </div>
+</body>
+</html>
