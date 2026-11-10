@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều khoản Dịch vụ - Healthy AI</title>
+    <!-- Google Fonts: Be Vietnam Pro for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2ecc71; /* Vibrant emerald green */
+            --primary-dark: #27ae60;
+            --primary-light: #e8f8f5;
+            --bg-gradient-start: #081c15; /* Elegant dark forest green gradient */
+            --bg-gradient-end: #1b4332;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --card-bg: rgba(22, 49, 39, 0.95);
+            --border-color: rgba(46, 204, 113, 0.15);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #a8ffb2 0%, var(--primary) 100%);
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(46, 204, 113, 0.4);
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(46, 204, 113, 0.4); }
+            100% { transform: scale(1.05); box-shadow: 0 0 30px rgba(46, 204, 113, 0.6); }
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            color: #081c15;
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #081c15;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(20px);
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 20px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #d1d5db;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            color: #d1d5db;
+        }
+
+        li::before {
+            content: '✦';
+            position: absolute;
+            left: 5px;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .important-box {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .important-box h3 {
+            color: #ef4444;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .info-box {
+            background: rgba(46, 204, 113, 0.05);
+            border: 1px dashed var(--border-color);
+            padding: 20px;
+            border-radius: 16px;
+            margin-top: 30px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #a8ffb2;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <span class="logo-icon">🥗</span>
+            </div>
+            <h1 class="vi-text">ĐIỀU KHOẢN DỊCH VỤ</h1>
+            <h1 class="en-text" style="display:none;">TERMS OF SERVICE</h1>
+            <div class="subtitle">Healthy AI — Smart Nutrition & Calorie Tracking</div>
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLang('vi')">Tiếng Việt</button>
+                <button class="lang-btn" onclick="switchLang('en')">English</button>
+            </div>
+        </header>
+
+        <!-- TIẾNG VIỆT CONTENT -->
+        <main id="terms-vi" class="content-card">
+            <div class="intro">
+                Chào mừng bạn đến với <strong>Healthy AI</strong> (gọi tắt là "Ứng dụng"), một sản phẩm được phát triển và vận hành bởi <strong>VTD Studio</strong> ("Chúng tôi"). Bằng việc tải về, cài đặt hoặc sử dụng ứng dụng, bạn đồng ý tuân thủ các Điều khoản Dịch vụ dưới đây.
+            </div>
+
+            <section>
+                <h2>1. Mô Tả Dịch Vụ</h2>
+                <p>Healthy AI là trợ lý dinh dưỡng thông minh ứng dụng công nghệ Trí tuệ Nhân tạo (AI), hỗ trợ người dùng:</p>
+                <ul>
+                    <li>Nhận diện món ăn thông qua hình ảnh camera hoặc thư viện trên thiết bị.</li>
+                    <li>Ước tính hàm lượng Calo, các chất dinh dưỡng đa lượng (Đạm, Tinh bột, Chất béo) và vi chất dinh dưỡng.</li>
+                    <li>Theo dõi lượng calo tiêu thụ hàng ngày và quản lý mục tiêu thể trạng cá nhân (tăng cân, giảm cân, giữ cân).</li>
+                </ul>
+            </section>
+
+            <section class="important-box">
+                <h3>⚠️ TUYÊN BỐ MIỄN TRỪ TRÁCH NHIỆM Y TẾ (MEDICAL DISCLAIMER)</h3>
+                <p><strong>Healthy AI KHÔNG PHẢI LÀ THIẾT BỊ Y TẾ HOẶC DỊCH VỤ TƯ VẤN Y TẾ CHUYÊN NGHIỆP.</strong></p>
+                <p style="margin-bottom: 0;">Mọi dữ liệu phân tích dinh dưỡng, calo và khuyến nghị ăn uống chỉ mang tính chất ước tính tham khảo cho lối sống lành mạnh. Kết quả do AI ước tính có thể sai lệch tùy theo nguyên liệu, gia vị, khối lượng và phương pháp chế biến thực tế. Bạn không được sử dụng thông tin từ ứng dụng để tự chẩn đoán, điều trị bệnh, hoặc thay thế chỉ định của bác sĩ hoặc chuyên gia dinh dưỡng.</p>
+            </section>
+
+            <section>
+                <h2>2. Quyền và Trách Nhiệm Của Người Dùng</h2>
+                <ul>
+                    <li><strong>Độ tuổi:</strong> Bạn phải từ đủ 13 tuổi trở lên để sử dụng ứng dụng.</li>
+                    <li><strong>Tự chịu trách nhiệm:</strong> Bạn hoàn toàn tự chịu trách nhiệm đối với chế độ ăn uống, tình trạng dị ứng thực phẩm và sức khỏe cá nhân của mình.</li>
+                    <li><strong>Sử dụng hợp pháp:</strong> Không can thiệp, dịch ngược mã nguồn (reverse engineer), sao chép hoặc phân phối lại ứng dụng dưới bất kỳ hình thức nào.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Công Nghệ AI & Dữ Liệu Hình Ảnh</h2>
+                <ul>
+                    <li>Ứng dụng sử dụng mô hình AI (bao gồm Google Gemini API) để phân tích hình ảnh món ăn bạn gửi lên qua giao thức mã hóa an toàn HTTPS.</li>
+                    <li>Chúng tôi không lưu trữ vĩnh viễn hình ảnh của bạn trên máy chủ của bên thứ ba.</li>
+                    <li>Người dùng có quyền chỉnh sửa tên món ăn bất kỳ lúc nào để AI tái phân tích nhằm đảm bảo độ chính xác cao nhất.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Quyền Sở Hữu Trí Tuệ</h2>
+                <p>Toàn bộ thiết kế giao diện, mã nguồn, biểu tượng, logo và thương hiệu Healthy AI thuộc quyền sở hữu độc quyền của <strong>VTD Studio</strong>. Mọi hành vi vi phạm quyền sở hữu trí tuệ đều bị nghiêm cấm theo quy định pháp luật.</p>
+            </section>
+
+            <section>
+                <h2>5. Tính Năng VIP & Mã Quà Tặng</h2>
+                <p>Ứng dụng có thể cung cấp các gói trải nghiệm nâng cấp (không giới hạn lượt quét, phân tích vi chất chuyên sâu). Các tính năng này có thể được kích hoạt thông qua mã quà tặng hoặc theo chính sách phân phối trên Google Play Store.</p>
+            </section>
+
+            <section class="info-box">
+                <h2>6. Thông Tin Liên Hệ</h2>
+                <p>Nếu bạn có bất kỳ câu hỏi nào về Điều khoản Dịch vụ, vui lòng liên hệ:</p>
+                <p>✦ <strong>Nhà phát triển:</strong> VTD Studio / vuhiepkt2017-gif</p>
+                <p>✦ <strong>Email hỗ trợ:</strong> <a href="mailto:vuhiepkt2017@gmail.com">vuhiepkt2017@gmail.com</a></p>
+                <p>✦ <strong>Chính sách Quyền riêng tư:</strong> <a href="healthy-ai.html">Xem Chính sách Quyền riêng tư (Privacy Policy)</a></p>
+            </section>
+        </main>
+
+        <!-- ENGLISH CONTENT -->
+        <main id="terms-en" class="content-card" style="display:none;">
+            <div class="intro">
+                Welcome to <strong>Healthy AI</strong> (the "Application"), developed and operated by <strong>VTD Studio</strong> ("We", "Us"). By downloading, installing, or using the Application, you agree to be bound by these Terms of Service.
+            </div>
+
+            <section>
+                <h2>1. Description of Service</h2>
+                <p>Healthy AI is an intelligent nutritional assistant powered by Artificial Intelligence (AI) designed to help users:</p>
+                <ul>
+                    <li>Identify food dishes from camera captures or uploaded photos from your device library.</li>
+                    <li>Estimate calories, macronutrients (Protein, Carbs, Fat), and micronutrient breakdowns.</li>
+                    <li>Track daily calorie goals and log dietary history (weight gain, weight loss, or weight maintenance).</li>
+                </ul>
+            </section>
+
+            <section class="important-box">
+                <h3>⚠️ MEDICAL & HEALTH DISCLAIMER</h3>
+                <p><strong>HEALTHY AI IS NOT A MEDICAL DEVICE AND DOES NOT PROVIDE PROFESSIONAL MEDICAL ADVICE.</strong></p>
+                <p style="margin-bottom: 0;">All nutritional estimations, calorie counts, and dietary insights are provided for general educational and lifestyle tracking purposes only. Visual AI analysis may have margins of error depending on ingredients, cooking methods, and portion sizes. Do not rely on this app for clinical diagnosis, treatment, or as a substitute for licensed medical or dietitian advice.</p>
+            </section>
+
+            <section>
+                <h2>2. User Responsibilities</h2>
+                <ul>
+                    <li><strong>Age requirement:</strong> You must be at least 13 years of age to use this Application.</li>
+                    <li><strong>Personal Health:</strong> You are solely responsible for managing your dietary intake, allergies, and physical health conditions.</li>
+                    <li><strong>Lawful Use:</strong> You agree not to reverse-engineer, decompile, redistribute, or abuse any part of the Application.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. AI Technology & Image Processing</h2>
+                <ul>
+                    <li>The Application utilizes Google Generative AI (Gemini API) to visually inspect food images via secure HTTPS transmission.</li>
+                    <li>We do not store your personal photos permanently on external servers.</li>
+                    <li>Users have the full right to edit dish names to trigger re-analysis for higher nutritional accuracy.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Intellectual Property</h2>
+                <p>All source code, user interface designs, logos, graphics, and assets associated with Healthy AI are the exclusive intellectual property of <strong>VTD Studio</strong>. All rights reserved.</p>
+            </section>
+
+            <section class="info-box">
+                <h2>5. Contact Information</h2>
+                <p>If you have any questions regarding these Terms of Service, please reach out to:</p>
+                <p>✦ <strong>Developer:</strong> VTD Studio / vuhiepkt2017-gif</p>
+                <p>✦ <strong>Support Email:</strong> <a href="mailto:vuhiepkt2017@gmail.com">vuhiepkt2017@gmail.com</a></p>
+                <p>✦ <strong>Privacy Policy:</strong> <a href="healthy-ai.html">View Privacy Policy</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p class="vi-text">Cập nhật lần cuối: Ngày 10 tháng 11 năm 2026</p>
+            <p class="en-text" style="display:none;">Last updated: November 10, 2026</p>
+            <p>&copy; 2026 Healthy AI - VTD Studio. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if (lang === 'vi') {
+                buttons[0].classList.add('active');
+            } else {
+                buttons[1].classList.add('active');
+            }
+
+            const termsVi = document.getElementById('terms-vi');
+            const termsEn = document.getElementById('terms-en');
+            const viTexts = document.querySelectorAll('.vi-text');
+            const enTexts = document.querySelectorAll('.en-text');
+
+            if (lang === 'vi') {
+                termsVi.style.display = 'block';
+                termsEn.style.display = 'none';
+                viTexts.forEach(el => el.style.display = '');
+                enTexts.forEach(el => el.style.display = 'none');
+            } else {
+                termsVi.style.display = 'none';
+                termsEn.style.display = 'block';
+                viTexts.forEach(el => el.style.display = 'none');
+                enTexts.forEach(el => el.style.display = '');
+            }
+        }
+
+        switchLang('vi');
+    </script>
+</body>
+</html>
