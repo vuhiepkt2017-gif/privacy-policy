@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách Quyền riêng tư - ShiftMate Pro | Privacy Policy</title>
+    <!-- Google Fonts: Be Vietnam Pro for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3b82f6; /* Modern Blue */
+            --primary-dark: #1d4ed8;
+            --primary-light: #dbeafe;
+            --secondary: #06b6d4; /* Vibrant Cyan */
+            --accent: #10b981; /* Emerald Green */
+            --warning: #f59e0b; /* Amber */
+            --bg-gradient-start: #0a1128; /* Deep Midnight Navy */
+            --bg-gradient-end: #001f54;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --card-bg: rgba(15, 23, 42, 0.85);
+            --border-color: rgba(59, 130, 246, 0.2);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 35px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 76px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+            margin-bottom: 18px;
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4); }
+            100% { transform: scale(1.04); box-shadow: 0 12px 32px rgba(6, 182, 212, 0.5); }
+        }
+
+        .logo-icon {
+            font-size: 2.4rem;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .app-meta {
+            display: inline-flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .meta-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--text-main);
+            padding: 9px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-1px);
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #ffffff;
+            font-weight: 600;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(16px);
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #93c5fd;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #e2e8f0;
+            font-size: 0.98rem;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #93c5fd;
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+
+        .info-box {
+            background: rgba(6, 182, 212, 0.08);
+            border-left: 4px solid var(--secondary);
+            padding: 18px 22px;
+            border-radius: 0 16px 16px 0;
+            margin: 20px 0;
+        }
+
+        .important-box {
+            background: rgba(239, 68, 68, 0.08);
+            border-left: 4px solid #ef4444;
+            padding: 18px 22px;
+            border-radius: 0 16px 16px 0;
+            margin: 20px 0;
+        }
+
+        .success-box {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 18px 22px;
+            border-radius: 0 16px 16px 0;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 20px 12px; }
+            .content-card { padding: 24px 18px; border-radius: 18px; }
+            h1 { font-size: 1.7rem; }
+            h2 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <span class="logo-icon">⏱️</span>
+            </div>
+            <h1>ShiftMate Pro</h1>
+            <p class="subtitle" style="color: #94a3b8; font-size: 1.05rem;">Chính sách Quyền riêng tư & Bảo vệ Dữ liệu | Privacy Policy</p>
+            <div class="app-meta">
+                <span class="meta-pill">📦 Package: com.vtdstudio.shiftmate</span>
+                <span class="meta-pill">🏢 VTD Studio</span>
+                <span class="meta-pill">🛡️ GDPR & Google Play Compliant</span>
+            </div>
+        </header>
+
+        <!-- Language Switcher Bar -->
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('vi')">
+                <span>🇻🇳</span> Tiếng Việt
+            </button>
+            <button class="lang-btn" onclick="switchLang('en')">
+                <span>🇺🇸</span> English
+            </button>
+        </div>
+
+        <main class="content-card">
+            <!-- ================= VIETNAMESE VERSION ================= -->
+            <div id="policy-vi">
+                <div class="success-box">
+                    <strong>Tóm tắt cam kết cốt lõi:</strong> ShiftMate Pro ưu tiên tối đa tính bảo mật và quyền riêng tư cá nhân. Mọi dữ liệu ca làm, mức lương, lịch làm việc đều được lưu trữ trực tiếp trên thiết bị (Local-First). Khi bạn chọn đăng nhập Google để sao lưu đám mây, dữ liệu được truyền tải và lưu trữ an toàn bằng công nghệ mã hóa của Google Firebase. Chúng tôi <strong>không bao giờ bán dữ liệu</strong> của bạn cho bên thứ ba.
+                </div>
+
+                <section>
+                    <h2>1. Giới thiệu tổng quan</h2>
+                    <p>Chào mừng bạn đến với <strong>ShiftMate Pro</strong> ("Ứng dụng"), được phát triển và vận hành bởi <strong>VTD Studio</strong> ("chúng tôi"). ShiftMate Pro là ứng dụng tiện ích chuyên biệt dành cho người lao động, nhân viên làm ca xoay vòng, y bác sĩ, nhân viên bán hàng và người làm nhiều công việc (multi-job).</p>
+                    <p>Chính sách Quyền riêng tư này giải thích cách chúng tôi thu thập, sử dụng, lưu trữ và bảo vệ thông tin của bạn khi bạn sử dụng ứng dụng ShiftMate Pro (Mã gói: <code>com.vtdstudio.shiftmate</code>).</p>
+                </section>
+
+                <section>
+                    <h2>2. Các loại dữ liệu được xử lý & Mục đích</h2>
+                    <p>Để cung cấp đầy đủ các tính năng thông minh của ứng dụng, ShiftMate Pro xử lý các nhóm thông tin sau:</p>
+                    <ul>
+                        <li><strong>Dữ liệu Quản lý Ca & Công việc:</strong> Tên công việc (Job), màu nhận diện công việc, thời gian vào ca, tan ca, ca đêm, ca gãy, ghi chú ca làm và quy luật xoay vòng ca. <em>Dữ liệu này lưu trữ cục bộ trên thiết bị của bạn nhằm giúp bạn xem lịch và nhận thông báo ca trực.</em></li>
+                        <li><strong>Dữ liệu Tính toán Lương & Thu nhập:</strong> Lương cơ bản, đơn giá theo giờ, hệ số tăng ca (OT), phụ cấp ca đêm, phụ cấp ngày lễ/cuối tuần, các khoản giảm trừ và thuế/bảo hiểm. <em>Dữ liệu này chỉ được dùng để tính toán và hiển thị minh bạch bảng lương cho bạn. Ứng dụng không thu thập thông tin tài khoản ngân hàng hay thẻ tín dụng.</em></li>
+                        <li><strong>Dữ liệu Chấm công (Check-in / Check-out):</strong> Dấu thời gian khi bạn bấm xác nhận vào ca và tan ca thực tế, dùng để so sánh thời gian dự kiến và thực tế.</li>
+                        <li><strong>Báo thức & Nhắc việc:</strong> Thời gian cài đặt báo thức trước giờ vào ca và trước khi tan ca để rung chuông thông báo đúng giờ.</li>
+                        <li><strong>Tài khoản Đám mây (Tùy chọn):</strong> Khi bạn chủ động sử dụng tính năng "Đăng nhập Google để Sao lưu / Khôi phục", ứng dụng sẽ nhận định danh an toàn (User ID, Email, Tên hiển thị) từ Google để đồng bộ lịch ca và công việc của bạn lên Google Cloud Firestore.</li>
+                        <li><strong>Tệp báo cáo PDF:</strong> Khi bạn chọn xuất bảng lương chi tiết, ứng dụng sẽ tạo tệp PDF trên bộ nhớ thiết bị để bạn xem hoặc chia sẻ qua các ứng dụng mà bạn chọn.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. Quyền hạn thiết bị (Android Permissions)</h2>
+                    <p>ShiftMate Pro chỉ yêu cầu các quyền hạn tối thiểu cần thiết để vận hành các tính năng ứng dụng:</p>
+                    <ul>
+                        <li><code>POST_NOTIFICATIONS</code> (Android 13+): Cho phép ứng dụng hiển thị thông báo nhắc nhở ca làm việc, thông báo chấm công và báo thức.</li>
+                        <li><code>SCHEDULE_EXACT_ALARM</code>: Đảm bảo chuông báo thức trước khi vào ca và trước khi tan ca đổ chuông chính xác từng giây ngay cả khi thiết bị đang ở chế độ ngủ (Doze Mode).</li>
+                        <li><code>INTERNET</code> & <code>ACCESS_NETWORK_STATE</code>: Chỉ sử dụng khi bạn chủ động đăng nhập Google và đồng bộ hóa sao lưu/khôi phục dữ liệu ca làm việc với Google Firebase.</li>
+                    </ul>
+                    <div class="badge-container">
+                        <span class="badge">Không theo dõi vị trí GPS ngầm</span>
+                        <span class="badge">Không đọc danh bạ</span>
+                        <span class="badge">Không truy cập camera/micro</span>
+                        <span class="badge">Không quyền truy cập file nhạy cảm</span>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>4. Dịch vụ Bên thứ ba (Third-Party Services)</h2>
+                    <p>Ứng dụng tích hợp các dịch vụ nền tảng chuẩn mực và uy tín hàng đầu từ Google:</p>
+                    <ul>
+                        <li><strong>Google Firebase Authentication:</strong> Cung cấp xác thực danh tính an toàn qua tài khoản Google của bạn mà ứng dụng không cần biết hay lưu mật khẩu của bạn.</li>
+                        <li><strong>Google Cloud Firestore:</strong> Dịch vụ cơ sở dữ liệu đám mây bảo mật cao của Google, dùng để lưu trữ bản sao lưu lịch ca và công việc đã được mã hóa của người dùng.</li>
+                        <li><strong>Google Play Services:</strong> Nền tảng hạ tầng của Google hỗ trợ cập nhật ứng dụng và quản lý tài khoản.</li>
+                    </ul>
+                </section>
+
+                <section class="important-box">
+                    <h2>5. Quyền kiểm soát & Xóa dữ liệu của Người dùng</h2>
+                    <p>Chúng tôi tôn trọng quyền tự quyết dữ liệu tuyệt đối của bạn (Right to be Forgotten):</p>
+                    <ul style="margin-top: 8px;">
+                        <li><strong>Xóa dữ liệu trên máy:</strong> Bạn có thể xóa bất kỳ ca làm việc, công việc hoặc toàn bộ dữ liệu trong phần Cài đặt của ShiftMate Pro, hoặc xóa dữ liệu ứng dụng trong cài đặt Android. Khi gỡ cài đặt ứng dụng, toàn bộ dữ liệu cục bộ sẽ được xóa sạch.</li>
+                        <li><strong>Xóa bản sao lưu trên Đám mây:</strong> Bạn có thể ngắt kết nối đồng bộ đám mây bất kỳ lúc nào. Nếu bạn muốn xóa vĩnh viễn toàn bộ bản sao lưu của mình trên Firebase Firestore, vui lòng gửi email yêu cầu về <a href="mailto:vuhiepkt2017@gmail.com" style="color: #60a5fa; font-weight: 600;">vuhiepkt2017@gmail.com</a>. Chúng tôi sẽ xóa sạch toàn bộ bản ghi liên quan đến tài khoản của bạn trong vòng 48 giờ làm việc.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>6. An toàn & Bảo mật Thông tin</h2>
+                    <p>Mọi kết nối truyền tải giữa thiết bị của bạn và hệ thống lưu trữ đám mây Google Firestore đều được mã hóa bằng giao thức tiêu chuẩn công nghiệp HTTPS / TLS 1.3. Dữ liệu trên thiết bị được bảo vệ bởi cơ chế bảo mật sandbox riêng của hệ điều hành Android.</p>
+                    <p>Chúng tôi cam kết <strong>không chia sẻ, không bán và không phân tích dữ liệu tài chính/lương của bạn</strong> cho các mạng quảng cáo bên thứ ba.</p>
+                </section>
+
+                <section>
+                    <h2>7. Quyền riêng tư của Trẻ em</h2>
+                    <p>Ứng dụng ShiftMate Pro hướng đến đối tượng người đi làm và người trưởng thành. Chúng tôi không cố ý thu thập hoặc yêu cầu bất kỳ thông tin nhận dạng cá nhân nào từ trẻ em dưới 13 tuổi (hoặc độ tuổi tối thiểu theo quy định của pháp luật nước sở tại).</p>
+                </section>
+
+                <section class="info-box">
+                    <h2>8. Thông tin Liên hệ</h2>
+                    <p>Nếu bạn có bất kỳ câu hỏi, thắc mắc hoặc yêu cầu nào liên quan đến Chính sách Quyền riêng tư này hoặc dữ liệu cá nhân của bạn, xin vui lòng liên hệ:</p>
+                    <p>✦ <strong>Nhà phát triển:</strong> VTD Studio / vuhiepkt2017-gif</p>
+                    <p>✦ <strong>Email hỗ trợ:</strong> <a href="mailto:vuhiepkt2017@gmail.com" style="color: #60a5fa; font-weight: 600;">vuhiepkt2017@gmail.com</a></p>
+                    <p>✦ <strong>Địa chỉ:</strong> Hà Nội, Việt Nam</p>
+                </section>
+            </div>
+
+            <!-- ================= ENGLISH VERSION ================= -->
+            <div id="policy-en" style="display:none;">
+                <div class="success-box">
+                    <strong>Core Commitment Summary:</strong> ShiftMate Pro prioritizes your privacy and data security above all else. All your work shifts, job profiles, and income calculations are stored locally on your device (Local-First). When you choose to sign in with Google for cloud backup, your data is securely transferred and stored using encrypted Google Firebase technology. We <strong>never sell your data</strong> to third parties.
+                </div>
+
+                <section>
+                    <h2>1. Introduction</h2>
+                    <p>Welcome to <strong>ShiftMate Pro</strong> ("the Application"), developed and operated by <strong>VTD Studio</strong> ("we", "us", or "our"). ShiftMate Pro is an intuitive productivity tool tailored for shift workers, medical personnel, retail employees, and multi-job professionals.</p>
+                    <p>This Privacy Policy outlines how we collect, use, store, and safeguard your information when you use the ShiftMate Pro mobile application (Package ID: <code>com.vtdstudio.shiftmate</code>).</p>
+                </section>
+
+                <section>
+                    <h2>2. Information We Process & Purposes</h2>
+                    <p>To deliver its core scheduling and productivity features, ShiftMate Pro processes the following categories of information:</p>
+                    <ul>
+                        <li><strong>Shift & Job Management Data:</strong> Job titles, custom color markers, shift start/end times, night shifts, split shifts, work notes, and rotational shift cycles. <em>This data is stored locally on your device to display your schedule and trigger timely notifications.</em></li>
+                        <li><strong>Salary & Earnings Calculations:</strong> Base hourly wages, overtime (OT) multipliers, night shift allowances, weekend/holiday bonuses, deductions, and tax estimates. <em>This information is exclusively used on-device to compute transparent wage breakdowns. We never collect bank accounts, debit/credit cards, or financial credentials.</em></li>
+                        <li><strong>Attendance & Clock-In/Out Timestamps:</strong> Timestamps recorded when you manually confirm shift start and shift end for accuracy tracking.</li>
+                        <li><strong>Alarms & Reminders:</strong> Custom pre-shift and pre-dismissal alarm settings to wake you up and ensure punctual shift transitions.</li>
+                        <li><strong>Optional Cloud Account Data:</strong> If you voluntarily sign in with Google to use "Cloud Backup & Restore", the app receives a secure token (User ID, Email, Display Name) from Google to store your encrypted shift backups on Google Cloud Firestore.</li>
+                        <li><strong>PDF Reports:</strong> When you export a salary breakdown or shift summary, a PDF file is generated locally in your device's storage for your personal viewing or sharing.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. Device Permissions (Android)</h2>
+                    <p>ShiftMate Pro only requests the minimum essential permissions necessary to operate:</p>
+                    <ul>
+                        <li><code>POST_NOTIFICATIONS</code> (Android 13+): Required to deliver shift alerts, clock-in reminders, and alarm notifications.</li>
+                        <li><code>SCHEDULE_EXACT_ALARM</code>: Ensures shift alarm bells trigger with precision down to the second, even when your device enters battery-saving Doze mode.</li>
+                        <li><code>INTERNET</code> & <code>ACCESS_NETWORK_STATE</code>: Utilized strictly when you initiate Google Sign-In and cloud backup/restore via Google Firebase.</li>
+                    </ul>
+                    <div class="badge-container">
+                        <span class="badge">No Background GPS Tracking</span>
+                        <span class="badge">No Contacts Access</span>
+                        <span class="badge">No Camera or Microphone Access</span>
+                        <span class="badge">No Sensitive File Access</span>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>4. Third-Party Services</h2>
+                    <p>We integrate industry-standard, compliant services provided by Google:</p>
+                    <ul>
+                        <li><strong>Google Firebase Authentication:</strong> Provides secure authentication via your Google account without exposing your password to our application.</li>
+                        <li><strong>Google Cloud Firestore:</strong> A highly secure cloud database provided by Google LLC, used to store your encrypted shift backup data.</li>
+                        <li><strong>Google Play Services:</strong> Android system infrastructure for app lifecycle and account authentication.</li>
+                    </ul>
+                </section>
+
+                <section class="important-box">
+                    <h2>5. User Data Control & Deletion Rights</h2>
+                    <p>We fully respect your data sovereignty and right to be forgotten:</p>
+                    <ul style="margin-top: 8px;">
+                        <li><strong>Local Data Deletion:</strong> You can delete any shift, job, or reset all data at any time inside the app's Settings screen. Uninstalling ShiftMate Pro immediately wipes all local application databases from your device.</li>
+                        <li><strong>Cloud Backup Deletion:</strong> You can disconnect cloud synchronization at any time. To permanently delete your cloud backup from Firebase Firestore, simply send an email request to <a href="mailto:vuhiepkt2017@gmail.com" style="color: #60a5fa; font-weight: 600;">vuhiepkt2017@gmail.com</a>. We will permanently purge all cloud records linked to your account within 48 business hours.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>6. Information Security</h2>
+                    <p>All network traffic between your device and Google's cloud infrastructure is encrypted using modern TLS 1.3 / HTTPS encryption. Local data is protected by Android's application sandboxing architecture.</p>
+                    <p>We strictly commit to <strong>never selling, renting, or disclosing your personal or financial calculation data</strong> to third-party ad networks or data brokers.</p>
+                </section>
+
+                <section>
+                    <h2>7. Children's Privacy</h2>
+                    <p>ShiftMate Pro is a workplace utility application intended for working professionals and adults. We do not knowingly collect or solicit personal information from children under the age of 13.</p>
+                </section>
+
+                <section class="info-box">
+                    <h2>8. Contact Information</h2>
+                    <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy or your data, please contact the developer:</p>
+                    <p>✦ <strong>Developer:</strong> VTD Studio / vuhiepkt2017-gif</p>
+                    <p>✦ <strong>Support Email:</strong> <a href="mailto:vuhiepkt2017@gmail.com" style="color: #60a5fa; font-weight: 600;">vuhiepkt2017@gmail.com</a></p>
+                    <p>✦ <strong>Location:</strong> Hanoi, Vietnam</p>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p id="footer-vi">Cập nhật lần cuối: 20 tháng 11, 2026 | &copy; 2026 ShiftMate Pro by VTD Studio. Bảo lưu mọi quyền.</p>
+            <p id="footer-en" style="display:none;">Last updated: November 20, 2026 | &copy; 2026 ShiftMate Pro by VTD Studio. All rights reserved.</p>
+            <p style="margin-top: 8px;">
+                <a href="index.html">&larr; Danh sách chính sách / All Privacy Policies</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            const policyVi = document.getElementById('policy-vi');
+            const policyEn = document.getElementById('policy-en');
+            const footerVi = document.getElementById('footer-vi');
+            const footerEn = document.getElementById('footer-en');
+
+            if (lang === 'vi') {
+                buttons[0].classList.add('active');
+                policyVi.style.display = 'block';
+                policyEn.style.display = 'none';
+                footerVi.style.display = 'block';
+                footerEn.style.display = 'none';
+            } else {
+                buttons[1].classList.add('active');
+                policyVi.style.display = 'none';
+                policyEn.style.display = 'block';
+                footerVi.style.display = 'none';
+                footerEn.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
