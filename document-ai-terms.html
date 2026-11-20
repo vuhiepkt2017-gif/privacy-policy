@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều khoản Dịch vụ - Document AI</title>
+    <!-- Google Fonts: Be Vietnam Pro for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #38bdf8; /* Tech Sky Blue */
+            --primary-dark: #0284c7;
+            --primary-light: #e0f2fe;
+            --accent-mint: #34d399;
+            --bg-gradient-start: #081120;
+            --bg-gradient-end: #0f1f38;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --card-bg: rgba(15, 30, 54, 0.95);
+            --border-color: rgba(56, 189, 248, 0.2);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            background: radial-gradient(circle, #bae6fd 0%, var(--primary) 100%);
+            margin-bottom: 18px;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(56, 189, 248, 0.35); }
+            100% { transform: scale(1.05); box-shadow: 0 0 32px rgba(56, 189, 248, 0.6); }
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            color: #081120;
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .meta-info {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: var(--accent-mint);
+            font-weight: 500;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text-main);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #081120;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(20px);
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(56, 189, 248, 0.08);
+            border-radius: 14px;
+            padding: 18px;
+            border: 1px solid rgba(56, 189, 248, 0.25);
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 20px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        li strong {
+            color: #ffffff;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+            .content-card {
+                padding: 24px 18px;
+                border-radius: 18px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <span class="logo-icon">📜</span>
+            </div>
+            <h1>Document AI</h1>
+            <p class="subtitle vi-text">Trợ lý tài liệu thông minh &bull; Điều khoản Dịch vụ</p>
+            <p class="subtitle en-text" style="display:none;">Smart Document Assistant &bull; Terms of Service</p>
+            <div class="meta-info">
+                <span>Application ID: com.VTDStadio.DocumentAi &bull; Developer: VTD Studio</span>
+            </div>
+        </header>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('vi')">🇻🇳 Tiếng Việt</button>
+            <button class="lang-btn" onclick="switchLang('en')">🇺🇸 English</button>
+        </div>
+
+        <div class="content-card">
+            <!-- VIETNAMESE TERMS -->
+            <div id="terms-vi">
+                <div class="intro">
+                    Chào mừng bạn đến với <strong>Document AI</strong>. Các Điều khoản Dịch vụ này ("Điều khoản") quy định việc sử dụng ứng dụng di động Document AI được phát triển bởi <strong>VTD Studio</strong>. Bằng việc tải về, cài đặt hoặc sử dụng ứng dụng, bạn đồng ý tuân thủ và chịu sự ràng buộc của các Điều khoản này.
+                </div>
+
+                <section>
+                    <h2>1. Mô tả Dịch vụ</h2>
+                    <p>Document AI là bộ công cụ hỗ trợ xử lý tài liệu thông minh toàn diện, bao gồm:</p>
+                    <ul>
+                        <li>Quét tài liệu qua Camera tự căn góc và tối ưu hóa trang quét.</li>
+                        <li>Nhận dạng ký tự quang học (OCR) tiếng Việt chuẩn xác và chạy cục bộ.</li>
+                        <li>Bộ công cụ PDF: Đọc file, ghép nhiều file, tách trang, nén tối ưu dung lượng, xoay trang và ký tên điện tử.</li>
+                        <li>Trợ lý AI (Google Gemini): Hỗ trợ tóm tắt ý chính, dịch thuật tài liệu đa ngữ và trích xuất dữ liệu, số liệu quan trọng.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>2. Quyền sở hữu Tài liệu & Triết lý Local-First</h2>
+                    <p>Chúng tôi tôn trọng quyền sở hữu trí tuệ tuyệt đối của bạn đối với mọi nội dung:</p>
+                    <ul>
+                        <li>Bạn giữ toàn quyền sở hữu, bản quyền và quyền kiểm soát đối với mọi tài liệu, hình ảnh, chữ ký và văn bản bạn tạo hoặc nhập vào Document AI.</li>
+                        <li>Tất cả tài liệu được lưu trữ trực tiếp trong bộ nhớ cục bộ của máy bạn. Chúng tôi không lưu trữ, không sao chép và không can thiệp vào nội dung tài liệu của bạn.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. Quy tắc Sử dụng Tính năng AI (Gemini Assistant)</h2>
+                    <p>Khi sử dụng tính năng Trợ lý AI phân tích và dịch thuật:</p>
+                    <ul>
+                        <li>Bạn đồng ý không sử dụng AI để tạo hoặc xử lý các tài liệu có nội dung phi pháp, xâm phạm quyền riêng tư của người khác, phát tán mã độc hoặc vi phạm pháp luật hiện hành.</li>
+                        <li>Kết quả do AI tạo ra (tóm tắt, dịch thuật, phân tích số liệu) mang tính chất tham khảo và hỗ trợ nâng cao hiệu suất công việc. Bạn nên kiểm tra lại các nội dung pháp lý hoặc số liệu quan trọng trước khi đưa ra quyết định thực tế.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>4. Giao dịch Mua hàng Trong Ứng Dụng (In-App Purchases) & Dùng Thử VIP</h2>
+                    <ul>
+                        <li><strong>Dùng thử VIP 15 ngày:</strong> Ứng dụng cung cấp chương trình dùng thử VIP miễn phí tự động (15 ngày) cho người dùng mới trải nghiệm đầy đủ các tính năng không giới hạn.</li>
+                        <li><strong>Thanh toán an toàn:</strong> Giao dịch mua gói Pro VIP trọn đời được thực hiện độc quyền qua cổng thanh toán của <strong>Google Play In-App Billing</strong>. Mọi chính sách hoàn tiền, hủy gói đều tuân theo Quy định Tiêu dùng của Google Play.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>5. Quyền Sở hữu Trí tuệ của Ứng dụng</h2>
+                    <p>Ứng dụng Document AI, bao gồm mã nguồn, giao diện thiết kế 3D, biểu tượng, logo và thương hiệu "Document AI" thuộc quyền sở hữu trí tuệ độc quyền của VTD Studio. Bạn không được phép sao chép, dịch ngược mã nguồn (reverse engineer) hoặc sửa đổi ứng dụng khi chưa có sự đồng ý bằng văn bản của chúng tôi.</p>
+                </section>
+
+                <section>
+                    <h2>6. Giới hạn Trách nhiệm</h2>
+                    <p>Document AI được cung cấp trên nguyên tắc "nguyên trạng" (AS IS). Trong phạm vi tối đa được pháp luật cho phép, VTD Studio không chịu trách nhiệm đối với bất kỳ sự mất mát dữ liệu nào do hỏng hóc phần cứng thiết bị của bạn hoặc việc người dùng tự ý xóa nhầm tài liệu.</p>
+                </section>
+
+                <section>
+                    <h2>7. Thay đổi Điều khoản & Liên hệ</h2>
+                    <p>Chúng tôi có thể cập nhật các Điều khoản này khi có tính năng mới. Việc bạn tiếp tục sử dụng ứng dụng đồng nghĩa với việc bạn chấp thuận các thay đổi đó.</p>
+                    <div class="contact-box">
+                        <p><strong>Đơn vị phát triển:</strong> VTD Studio</p>
+                        <p><strong>Email hỗ trợ:</strong> <a href="mailto:vtdstudio.contact@gmail.com" style="color: var(--primary);">vtdstudio.contact@gmail.com</a></p>
+                        <p><strong>Mã ứng dụng:</strong> com.VTDStadio.DocumentAi</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ENGLISH TERMS -->
+            <div id="terms-en" style="display:none;">
+                <div class="intro">
+                    Welcome to <strong>Document AI</strong>. These Terms of Service ("Terms") govern your use of the Document AI mobile application developed by <strong>VTD Studio</strong>. By downloading, installing, or using the application, you agree to be bound by these Terms.
+                </div>
+
+                <section>
+                    <h2>1. Description of Service</h2>
+                    <p>Document AI provides an all-in-one smart document productivity suite, including:</p>
+                    <ul>
+                        <li>Camera document scanner with auto edge-detection and enhancement filters.</li>
+                        <li>High-accuracy offline Vietnamese optical character recognition (OCR).</li>
+                        <li>Full PDF toolbox: reader, merge, split, compression optimizer, rotation, and digital signature.</li>
+                        <li>AI Document Assistant (Google Gemini): document summarization, multi-language translation, and key data/timeline extraction.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>2. Document Ownership & Local-First Philosophy</h2>
+                    <p>We respect your full intellectual property ownership over all content:</p>
+                    <ul>
+                        <li>You maintain 100% ownership, copyright, and control over all documents, photos, signatures, and texts created or imported into Document AI.</li>
+                        <li>All files are stored locally in your device's private storage. We do not store, clone, or inspect your documents on external servers.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. AI Features Usage Guidelines</h2>
+                    <p>When utilizing the AI Assistant features:</p>
+                    <ul>
+                        <li>You agree not to use the service to process or generate illegal content, violate privacy rights, or engage in malicious activities.</li>
+                        <li>AI-generated answers, summaries, and translations are provided for productivity enhancement and reference purposes. You should verify critical legal or financial terms independently.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>4. In-App Purchases & VIP Trial Plan</h2>
+                    <ul>
+                        <li><strong>15-Day VIP Test Trial:</strong> We offer an automated 15-day VIP test mode allowing new users to evaluate all premium features without restrictions.</li>
+                        <li><strong>Secure Billing:</strong> All Pro VIP purchases are handled exclusively through <strong>Google Play In-App Billing</strong>. Refund requests and payment dispute resolutions are governed by Google Play Consumer Policies.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>5. Intellectual Property</h2>
+                    <p>Document AI, including its codebase, 3D visual designs, logos, and branding, is the proprietary property of VTD Studio. You may not decompile, reverse engineer, or create derivative works without prior written authorization.</p>
+                </section>
+
+                <section>
+                    <h2>6. Limitation of Liability</h2>
+                    <p>The application is provided on an "AS IS" basis. To the maximum extent permitted by applicable law, VTD Studio shall not be liable for any indirect damages or accidental data loss resulting from device malfunction or accidental file deletion by the user.</p>
+                </section>
+
+                <section>
+                    <h2>7. Amendments & Contact Information</h2>
+                    <p>These terms may be revised periodically. Continued use of Document AI indicates acceptance of updated terms.</p>
+                    <div class="contact-box">
+                        <p><strong>Developer:</strong> VTD Studio</p>
+                        <p><strong>Support Email:</strong> <a href="mailto:vtdstudio.contact@gmail.com" style="color: var(--primary);">vtdstudio.contact@gmail.com</a></p>
+                        <p><strong>Application ID:</strong> com.VTDStadio.DocumentAi</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <p class="vi-text">Cập nhật lần cuối: 20 tháng 11, 2026</p>
+            <p class="en-text" style="display:none;">Last updated: November 20, 2026</p>
+            <p>&copy; 2026 VTD Studio. All rights reserved. Document AI &bull; Smart Document Assistant</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if (lang === 'vi') {
+                buttons[0].classList.add('active');
+            } else {
+                buttons[1].classList.add('active');
+            }
+
+            const termsVi = document.getElementById('terms-vi');
+            const termsEn = document.getElementById('terms-en');
+            const viTexts = document.querySelectorAll('.vi-text');
+            const enTexts = document.querySelectorAll('.en-text');
+
+            if (lang === 'vi') {
+                termsVi.style.display = 'block';
+                termsEn.style.display = 'none';
+                viTexts.forEach(el => el.style.display = '');
+                enTexts.forEach(el => el.style.display = 'none');
+            } else {
+                termsVi.style.display = 'none';
+                termsEn.style.display = 'block';
+                viTexts.forEach(el => el.style.display = 'none');
+                enTexts.forEach(el => el.style.display = '');
+            }
+        }
+
+        switchLang('vi');
+    </script>
+</body>
+</html>
