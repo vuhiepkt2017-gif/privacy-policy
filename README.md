@@ -4,6 +4,7 @@ This repository hosts the public privacy policies for mobile applications publis
 
 ## Active Policies
 
+* 📄 **Document AI (Trợ lý Tài liệu Thông minh)**: [Privacy Policy (Vietnamese & English)](document-ai.html)
 * ⏱️ **ShiftMate Pro (Smart Shift & Salary Tracker)**: [Privacy Policy (Vietnamese & English)](shiftmate.html)
 * 📝 **MemoX (Secure Notes & Shopping List)**: [Privacy Policy (Vietnamese)](memox.html) | [Terms of Service (Vietnamese)](memox-terms.html)
 * 🛡️ **Blacklist Protector (Call Blacklist & Caller ID Warning)**: [Privacy Policy (Vietnamese)](blacklist-protector.html) | [Terms of Service (Vietnamese)](blacklist-terms.html)

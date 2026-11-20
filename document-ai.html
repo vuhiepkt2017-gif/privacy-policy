@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách Quyền riêng tư - Document AI</title>
+    <!-- Google Fonts: Be Vietnam Pro for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #38bdf8; /* Modern Tech Sky Blue */
+            --primary-dark: #0284c7;
+            --primary-light: #e0f2fe;
+            --accent-mint: #34d399;
+            --bg-gradient-start: #081120; /* Deep navy slate gradient */
+            --bg-gradient-end: #0f1f38;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --card-bg: rgba(15, 30, 54, 0.95);
+            --border-color: rgba(56, 189, 248, 0.2);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            background: radial-gradient(circle, #bae6fd 0%, var(--primary) 100%);
+            margin-bottom: 18px;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(56, 189, 248, 0.35); }
+            100% { transform: scale(1.05); box-shadow: 0 0 32px rgba(56, 189, 248, 0.6); }
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            color: #081120;
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .meta-info {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: var(--accent-mint);
+            font-weight: 500;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text-main);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #081120;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(20px);
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(56, 189, 248, 0.08);
+            border-radius: 14px;
+            padding: 18px;
+            border: 1px solid rgba(56, 189, 248, 0.25);
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 20px;
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        li strong {
+            color: #ffffff;
+        }
+
+        .highlight {
+            color: var(--accent-mint);
+            font-weight: 600;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+            .content-card {
+                padding: 24px 18px;
+                border-radius: 18px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <span class="logo-icon">📄</span>
+            </div>
+            <h1>Document AI</h1>
+            <p class="subtitle vi-text">Trợ lý tài liệu thông minh &bull; Chính sách Quyền riêng tư</p>
+            <p class="subtitle en-text" style="display:none;">Smart Document Assistant &bull; Privacy Policy</p>
+            <div class="meta-info">
+                <span>Application ID: com.VTDStadio.DocumentAi &bull; Developer: VTD Studio</span>
+            </div>
+        </header>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('vi')">🇻🇳 Tiếng Việt</button>
+            <button class="lang-btn" onclick="switchLang('en')">🇺🇸 English</button>
+        </div>
+
+        <div class="content-card">
+            <!-- VIETNAMESE POLICY -->
+            <div id="policy-vi">
+                <div class="intro">
+                    Chào mừng bạn đến với <strong>Document AI</strong>. Chúng tôi cam kết bảo vệ quyền riêng tư và quyền bảo mật thông tin tuyệt đối của bạn. Document AI được thiết kế và xây dựng theo triết lý <strong>Bảo mật Cục bộ (Local-First)</strong>: Mọi tài liệu, hình ảnh, văn bản trích xuất OCR và chữ ký số được xử lý và lưu trữ trực tiếp trên thiết bị của bạn. Chúng tôi KHÔNG thu thập tài liệu cá nhân lên máy chủ ngoài và KHÔNG bao giờ bán dữ liệu của bạn cho bất kỳ bên thứ ba nào.
+                </div>
+
+                <section>
+                    <h2>1. Thu thập và Mục đích sử dụng Quyền thiết bị</h2>
+                    <p>Ứng dụng chỉ yêu cầu những quyền tối thiểu thực sự cần thiết để phục vụ trực tiếp cho các tính năng bạn chủ động thao tác:</p>
+                    <ul>
+                        <li><strong>Quyền Camera (Máy ảnh):</strong> Sử dụng độc quyền khi bạn chủ động nhấn vào tính năng <em>"Quét tài liệu"</em> hoặc <em>"Chụp ảnh OCR"</em>. Ảnh chụp từ camera chỉ phục vụ trực tiếp quá trình trích xuất văn bản hoặc tạo file PDF trực tiếp trên máy của bạn và không bao giờ bị chia sẻ ra bên ngoài.</li>
+                        <li><strong>Quyền Truy cập Tệp & Bộ nhớ:</strong> Cho phép bạn chọn các file PDF hoặc hình ảnh từ thiết bị để đọc, ghép file, tách trang, nén giảm dung lượng, xoay trang hoặc xuất văn bản. Tất cả các tệp tạo ra được lưu trong phân vùng lưu trữ nội bộ riêng biệt của ứng dụng (private application storage).</li>
+                        <li><strong>Quyền Kết nối Internet:</strong> Dùng để:
+                            <ul>
+                                <li>Gửi đoạn văn bản trích xuất tới mô hình Google Gemini AI khi bạn chủ động bấm nút <em>"Tóm tắt ý chính"</em>, <em>"Dịch sang Tiếng Việt"</em> hoặc <em>"Hỏi đáp tài liệu"</em>.</li>
+                                <li>Xác thực trạng thái mua gói VIP thông qua hệ thống bảo mật Google Play In-App Billing.</li>
+                                <li>Đếm và kích hoạt số ngày dùng thử VIP 15 ngày tự động.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>2. Tính năng Trí tuệ Nhân tạo (Google Gemini AI)</h2>
+                    <p>Khi bạn sử dụng các tính năng phân tích nâng cao bằng AI:</p>
+                    <ul>
+                        <li>Nội dung tài liệu do bạn cung cấp được gửi qua kết nối mã hóa HTTPS trực tiếp tới Google Gemini API.</li>
+                        <li>Dữ liệu chỉ được mô hình AI xử lý theo thời gian thực (real-time) để sinh câu trả lời hoặc dịch thuật, hoàn toàn không được VTD Studio lưu trữ trên bất kỳ máy chủ cơ sở dữ liệu nào.</li>
+                        <li>Bạn có toàn quyền dán Khóa Gemini API riêng của chính mình (nhận miễn phí 0đ từ Google AI Studio) trong mục Cài đặt để quản lý lưu lượng và bảo mật độc lập.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. Thanh toán & Giao dịch In-App Purchases</h2>
+                    <p>Mọi giao dịch nâng cấp tài khoản Pro VIP trọn đời đều được xử lý độc quyền và an toàn thông qua cổng thanh toán của <strong>Google Play In-App Billing (Google Commerce Ltd)</strong>. VTD Studio hoàn toàn không có quyền truy cập, không nhìn thấy và không lưu trữ bất kỳ thông tin thẻ ngân hàng hoặc dữ liệu tài chính nào của người dùng.</p>
+                </section>
+
+                <section>
+                    <h2>4. Quyền kiểm soát & Xóa bỏ dữ liệu của người dùng</h2>
+                    <p>Người dùng có toàn quyền kiểm soát tuyệt đối dữ liệu tài liệu của mình bất cứ lúc nào:</p>
+                    <ul>
+                        <li>Trong mục <strong>Quản lý file</strong>, bạn có thể xóa từng tệp hoặc bấm nút <strong>"🗑️ Xóa tất cả"</strong> để xóa sạch toàn bộ các tài liệu đã tạo ra khỏi thiết bị ngay lập tức.</li>
+                        <li>Trong màn hình <strong>Trợ lý AI</strong>, bạn có thể bấm <strong>"Xóa chat"</strong> để dọn sạch toàn bộ lịch sử trao đổi.</li>
+                        <li>Khi bạn gỡ cài đặt ứng dụng (Uninstall), hệ điều hành Android sẽ tự động xóa sạch 100% các tệp tin trong thư mục dữ liệu cục bộ của ứng dụng.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>5. Dịch vụ của Bên thứ ba</h2>
+                    <p>Ứng dụng tích hợp các thư viện chính thức và uy tín của Google:</p>
+                    <ul>
+                        <li><strong>Google Play Services (ML Kit Text Recognition & Document Scanner):</strong> Nhận dạng ký tự và quét tài liệu hoàn toàn cục bộ trên máy mà không cần gửi dữ liệu lên mạng.</li>
+                        <li><strong>Google Generative AI SDK:</strong> Kết nối trực tiếp với mô hình Gemini 1.5 Flash.</li>
+                        <li><strong>Google Play Billing Library:</strong> Xử lý mua hàng an toàn.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>6. Quyền riêng tư của Trẻ em</h2>
+                    <p>Document AI là công cụ hỗ trợ công việc và học tập, không thu thập bất kỳ dữ liệu định danh cá nhân nào và hoàn toàn an toàn cho mọi lứa tuổi, tuân thủ đạo luật COPPA và chính sách Gia đình của Google Play.</p>
+                </section>
+
+                <section>
+                    <h2>7. Thay đổi Chính sách & Thông tin Liên hệ</h2>
+                    <p>Chính sách này có thể được cập nhật định kỳ để phù hợp với các cải tiến tính năng mới. Mọi cập nhật sẽ được thông báo trực tiếp trên trang này.</p>
+                    <div class="contact-box">
+                        <p><strong>Đơn vị phát triển:</strong> VTD Studio</p>
+                        <p><strong>Email hỗ trợ:</strong> <a href="mailto:vtdstudio.contact@gmail.com" style="color: var(--primary);">vtdstudio.contact@gmail.com</a></p>
+                        <p><strong>Mã ứng dụng:</strong> com.VTDStadio.DocumentAi</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ENGLISH POLICY -->
+            <div id="policy-en" style="display:none;">
+                <div class="intro">
+                    Welcome to <strong>Document AI</strong>. We are committed to safeguarding your privacy and personal data. Document AI is built with a <strong>Local-First Privacy Architecture</strong>: All your documents, photos, optical character recognition (OCR) texts, and signatures are processed and stored directly on your device. We do NOT collect personal documents on third-party servers and NEVER sell your data to any third parties.
+                </div>
+
+                <section>
+                    <h2>1. Permissions & Data Utilization</h2>
+                    <p>The app only requests the minimum device permissions strictly required to provide the features you explicitly initiate:</p>
+                    <ul>
+                        <li><strong>Camera Permission:</strong> Used exclusively when you intentionally trigger the <em>"Document Scanner"</em> or <em>"Camera OCR"</em> feature. Photos taken by the camera are processed directly on your device to create PDF or text files and are never uploaded or shared externally.</li>
+                        <li><strong>Storage / Media Access:</strong> Enables you to pick PDF and image files from your device to read, merge, split, compress, rotate, or extract text. All generated files are saved within the application's private sandbox storage on your device.</li>
+                        <li><strong>Internet Connection:</strong> Used solely to:
+                            <ul>
+                                <li>Send selected text snippets to Google Gemini AI when you request <em>"Summarize Key Points"</em>, <em>"Translate Document"</em>, or <em>"Chat with Document"</em>.</li>
+                                <li>Verify VIP subscription and purchase status via Google Play In-App Billing.</li>
+                                <li>Activate and track the 15-day VIP test trial automatically.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>2. Artificial Intelligence (Google Gemini AI) Features</h2>
+                    <p>When you utilize our smart AI analysis tools:</p>
+                    <ul>
+                        <li>Your provided text snippets are transmitted over secure HTTPS directly to the Google Gemini API.</li>
+                        <li>The text is processed in real time to generate answers and translations, and is never stored by VTD Studio in any external database.</li>
+                        <li>You have full control to provide your personal Gemini API Key (obtained free from Google AI Studio) in Settings for independent usage and transparency.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. In-App Purchases & Payments</h2>
+                    <p>All Pro VIP lifetime upgrade transactions are processed exclusively and securely by <strong>Google Play In-App Billing (Google Commerce Ltd)</strong>. VTD Studio does not have access to, does not collect, and does not store any payment card numbers, bank accounts, or financial credentials.</p>
+                </section>
+
+                <section>
+                    <h2>4. User Rights & Data Deletion</h2>
+                    <p>You retain 100% control over your document data at all times:</p>
+                    <ul>
+                        <li>In the <strong>File Manager</strong> screen, you can delete individual files or tap <strong>"🗑️ Delete All"</strong> to permanently purge all generated documents from your device immediately.</li>
+                        <li>In the <strong>AI Assistant</strong> screen, you can tap <strong>"Clear Chat"</strong> to wipe the interaction history.</li>
+                        <li>Uninstalling the application automatically and permanently purges all files within the app's private directory via the Android OS.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>5. Third-Party Services</h2>
+                    <p>The application integrates official and reputable Google developer SDKs:</p>
+                    <ul>
+                        <li><strong>Google Play Services (ML Kit Text Recognition & Document Scanner):</strong> On-device optical character recognition and edge-detection document scanning.</li>
+                        <li><strong>Google Generative AI SDK:</strong> Direct client library for Gemini 1.5 Flash.</li>
+                        <li><strong>Google Play Billing Library:</strong> Secure in-app billing verification.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>6. Children's Privacy</h2>
+                    <p>Document AI is a productivity and utility tool that does not knowingly collect personally identifiable information from children under 13 and complies fully with COPPA and Google Play Families policies.</p>
+                </section>
+
+                <section>
+                    <h2>7. Policy Changes & Contact Information</h2>
+                    <p>This policy may be updated periodically to reflect new features. Any modifications will be posted directly to this page.</p>
+                    <div class="contact-box">
+                        <p><strong>Developer:</strong> VTD Studio</p>
+                        <p><strong>Support Email:</strong> <a href="mailto:vtdstudio.contact@gmail.com" style="color: var(--primary);">vtdstudio.contact@gmail.com</a></p>
+                        <p><strong>Application ID:</strong> com.VTDStadio.DocumentAi</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <p class="vi-text">Cập nhật lần cuối: 20 tháng 11, 2026</p>
+            <p class="en-text" style="display:none;">Last updated: November 20, 2026</p>
+            <p>&copy; 2026 VTD Studio. All rights reserved. Document AI &bull; Smart Document Assistant</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            if (lang === 'vi') {
+                buttons[0].classList.add('active');
+            } else {
+                buttons[1].classList.add('active');
+            }
+
+            const policyVi = document.getElementById('policy-vi');
+            const policyEn = document.getElementById('policy-en');
+            const viTexts = document.querySelectorAll('.vi-text');
+            const enTexts = document.querySelectorAll('.en-text');
+
+            if (lang === 'vi') {
+                policyVi.style.display = 'block';
+                policyEn.style.display = 'none';
+                viTexts.forEach(el => el.style.display = '');
+                enTexts.forEach(el => el.style.display = 'none');
+            } else {
+                policyVi.style.display = 'none';
+                policyEn.style.display = 'block';
+                viTexts.forEach(el => el.style.display = 'none');
+                enTexts.forEach(el => el.style.display = '');
+            }
+        }
+
+        // Initialize default view to Vietnamese
+        switchLang('vi');
+    </script>
+</body>
+</html>
